@@ -10,6 +10,7 @@ import io.iohk.ethereum.utils.Config
 import io.iohk.ethereum.utils.Config.SyncConfig
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.{FlatSpec, Matchers}
+import org.spongycastle.util.encoders.Hex
 
 class BlockQueueSpec extends FlatSpec with Matchers with MockFactory {
 
@@ -165,7 +166,8 @@ class BlockQueueSpec extends FlatSpec with Matchers with MockFactory {
       ObjectGenerators.byteStringOfLengthNGen(32).sample.get
 
     val defaultHeader = BlockHeader(
-      parentHash = bEmpty,
+      //parentHash = bEmpty,
+      parentHash = ByteString(Hex.decode("d882d5c210bab4cb7ef0b9f3dc2130cb680959afcd9a8f9bf83ee6f13e2f9da3")),
       ommersHash = bEmpty,
       beneficiary = bEmpty,
       stateRoot = bEmpty,

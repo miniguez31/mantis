@@ -20,6 +20,7 @@ import org.scalatest.{FlatSpec, Matchers}
 
 import scala.collection.mutable
 import scala.language.reflectiveCalls
+import org.spongycastle.util.encoders.Hex
 
 
 class BlockImportSpec extends FlatSpec with Matchers with MockFactory {
@@ -308,7 +309,8 @@ class BlockImportSpec extends FlatSpec with Matchers with MockFactory {
       ObjectGenerators.byteStringOfLengthNGen(32).sample.get
 
     val defaultHeader = BlockHeader(
-      parentHash = bEmpty,
+      //parentHash = bEmpty,
+      parentHash = ByteString(Hex.decode("8345d132564b3660aa5f27c9415310634b50dbc92579c65a0825d9a255227a71")),
       ommersHash = bEmpty,
       beneficiary = bEmpty,
       stateRoot = bEmpty,

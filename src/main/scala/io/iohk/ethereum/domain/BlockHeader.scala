@@ -42,7 +42,8 @@ case class BlockHeader(
        |nonce: ${Hex.toHexString(nonce.toArray[Byte])}
        |}""".stripMargin
   }
-
+  //Preconditions
+  assert(Hex.toHexString(parentHash.toArray[Byte]).length == 64 , "Bad value for parentHash "+Hex.toHexString(parentHash.toArray[Byte])+" "+Hex.toHexString(parentHash.toArray[Byte]).length)
   /**
     * calculates blockHash for given block header
     * @return - hash that can be used to get block bodies / receipts

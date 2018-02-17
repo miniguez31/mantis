@@ -456,7 +456,8 @@ class SyncControllerSpec extends FlatSpec with Matchers with BeforeAndAfter with
 
     val EmptyTrieRootHash: ByteString = Account.EmptyStorageRootHash
     val baseBlockHeader = BlockHeader(
-      parentHash = ByteString("unused"),
+      //parentHash = ByteString("unused"),
+      parentHash = ByteString(Hex.decode("d882d5c210bab4cb7ef0b9f3dc2130cb680959afcd9a8f9bf83ee6f13e2f9da3")),
       ommersHash = ByteString("unused"),
       beneficiary = ByteString("unused"),
       stateRoot = EmptyTrieRootHash,

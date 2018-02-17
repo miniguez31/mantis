@@ -16,6 +16,7 @@ import org.scalatest.{FlatSpec, Matchers}
 import org.scalatest.prop.PropertyChecks
 import org.spongycastle.crypto.AsymmetricCipherKeyPair
 import org.spongycastle.crypto.params.ECPublicKeyParameters
+import org.spongycastle.util.encoders.Hex
 
 class ContractCreationSpec extends FlatSpec with PropertyChecks with Matchers {
 
@@ -161,7 +162,8 @@ class ContractCreationSpec extends FlatSpec with PropertyChecks with Matchers {
   trait ContractCreatingTx { self: TestSetup =>
 
     val blockHeader = BlockHeader(
-      parentHash = bEmpty,
+      //parentHash = bEmpty,
+      parentHash = ByteString(Hex.decode("d882d5c210bab4cb7ef0b9f3dc2130cb680959afcd9a8f9bf83ee6f13e2f9da3")),
       ommersHash = bEmpty,
       beneficiary = bEmpty,
       stateRoot = bEmpty,

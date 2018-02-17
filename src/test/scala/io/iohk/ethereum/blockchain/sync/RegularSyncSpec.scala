@@ -26,6 +26,7 @@ import io.iohk.ethereum.utils.Config.SyncConfig
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.{BeforeAndAfterAll, Matchers, WordSpecLike}
 import org.spongycastle.crypto.AsymmetricCipherKeyPair
+import org.spongycastle.util.encoders.Hex
 
 import scala.concurrent.duration._
 
@@ -417,7 +418,7 @@ class RegularSyncSpec extends TestKit(ActorSystem("RegularSync_system")) with Wo
     regularSync ! RegularSync.StartIdle
 
     val defaultHeader = BlockHeader(
-      parentHash = bEmpty,
+      parentHash = ByteString(Hex.decode("d882d5c210bab4cb7ef0b9f3dc2130cb680959afcd9a8f9bf83ee6f13e2f9da3")),
       ommersHash = bEmpty,
       beneficiary = bEmpty,
       stateRoot = bEmpty,
