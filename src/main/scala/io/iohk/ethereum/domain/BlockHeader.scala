@@ -44,6 +44,7 @@ case class BlockHeader(
   }
   //Preconditions
   assert(Hex.toHexString(parentHash.toArray[Byte]).length == 64 , "Bad value for parentHash "+Hex.toHexString(parentHash.toArray[Byte])+" "+Hex.toHexString(parentHash.toArray[Byte]).length)
+  assert(Hex.toHexString(ommersHash.toArray[Byte]).length == 64 , "Bad value for ommersHash "+Hex.toHexString(ommersHash.toArray[Byte])+" "+Hex.toHexString(ommersHash.toArray[Byte]).length)
   /**
     * calculates blockHash for given block header
     * @return - hash that can be used to get block bodies / receipts
@@ -53,7 +54,7 @@ case class BlockHeader(
   lazy val hashAsHexString: String = Hex.toHexString(hash.toArray)
 
   def idTag: String =
-    s"$number: $hashAsHexString"
+    s"$number: $hashAsHexString"  
 }
 
 object BlockHeader {
@@ -65,4 +66,6 @@ object BlockHeader {
     }
     rlpEncode(rlpEncoded)
   }
+
+  def empty: ByteString = ByteString(Hex.decode("0"*64))
 }

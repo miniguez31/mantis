@@ -311,7 +311,8 @@ class BlockImportSpec extends FlatSpec with Matchers with MockFactory {
     val defaultHeader = BlockHeader(
       //parentHash = bEmpty,
       parentHash = ByteString(Hex.decode("8345d132564b3660aa5f27c9415310634b50dbc92579c65a0825d9a255227a71")),
-      ommersHash = bEmpty,
+      //ommersHash = bEmpty,
+      ommersHash = BlockHeader.empty,
       beneficiary = bEmpty,
       stateRoot = bEmpty,
       transactionsRoot = bEmpty,

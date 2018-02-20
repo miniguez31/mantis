@@ -168,7 +168,8 @@ class BlockQueueSpec extends FlatSpec with Matchers with MockFactory {
     val defaultHeader = BlockHeader(
       //parentHash = bEmpty,
       parentHash = ByteString(Hex.decode("d882d5c210bab4cb7ef0b9f3dc2130cb680959afcd9a8f9bf83ee6f13e2f9da3")),
-      ommersHash = bEmpty,
+      //ommersHash = bEmpty,
+      ommersHash = BlockHeader.empty,
       beneficiary = bEmpty,
       stateRoot = bEmpty,
       transactionsRoot = bEmpty,
