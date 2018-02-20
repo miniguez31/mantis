@@ -876,7 +876,7 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
         parentHash = ByteString(Hex.decode("de7dca6e056fd4d47a3c629a90d6f4f8c6108b2f3eea3e79d5580753eb514a2d")),
         //ommersHash = ByteString.empty,
         ommersHash = ByteString(Hex.decode("1cd228c348a26bbe4402862d5a93f785b60f17c11f4a4dce30b312afb0abd069")),
-        beneficiary = ByteString.empty,
+        beneficiary = BlockHeader.bEmpty160,
         stateRoot = ByteString.empty,
         transactionsRoot = ByteString.empty,
         receiptsRoot = ByteString.empty,
@@ -915,7 +915,7 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
     val mixHash = ByteString(Hex.decode("40d9bd2064406d7f22390766d6fe5eccd2a67aa89bf218e99df35b2dbb425fb1"))
     val nonce = ByteString(Hex.decode("ce1b500070aeec4f"))
     val seedHash = ByteString(Hex.decode("00" * 32))
-    val powHash = ByteString(Hex.decode("e2a61ba230ab83b777770aff06cd2c54d52b47db69197f088bc29059e80155e1"))
+    val powHash = ByteString(Hex.decode("ef4b1ea252dc35a2736cec8e5282fc7627941749fed5a8a3bbb6449dc5f84023"))
     val target = ByteString((BigInt(2).pow(256) / difficulty).toByteArray)
 
     val v: Byte = 0x1c

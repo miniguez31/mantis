@@ -186,7 +186,7 @@ class PeerActorSpec extends FlatSpec with Matchers {
 
     val header = BlockHeader(
       ByteString(Hex.decode("d882d5c210bab4cb7ef0b9f3dc2130cb680959afcd9a8f9bf83ee6f13e2f9da3")),
-      BlockHeader.empty, ByteString("unused"), ByteString("unused"),
+      BlockHeader.bEmpty256, BlockHeader.bEmpty160, ByteString("unused"),
       ByteString("unused"), ByteString("unused"), ByteString("unused"),
       daoForkBlockTotalDifficulty + 100000, 3000000 ,0, 0, 0,
       ByteString("unused"),ByteString("unused"),ByteString("unused"))
@@ -362,8 +362,8 @@ class PeerActorSpec extends FlatSpec with Matchers {
         //parentHash = ByteString("this"),
         parentHash = ByteString(Hex.decode("0"*64)),
         //ommersHash = ByteString("is"),
-        ommersHash = BlockHeader.empty,
-        beneficiary = ByteString("not"),
+        ommersHash = BlockHeader.bEmpty256,
+        beneficiary = BlockHeader.bEmpty160,
         stateRoot = ByteString("an"),
         transactionsRoot = ByteString("ETC"),
         receiptsRoot = ByteString("fork"),
@@ -392,8 +392,8 @@ class PeerActorSpec extends FlatSpec with Matchers {
       //parentHash = ByteString("0"),
       parentHash = ByteString(Hex.decode("d882d5c210bab4cb7ef0b9f3dc2130cb680959afcd9a8f9bf83ee6f13e2f9da3")),
       //ommersHash = ByteString("0"),
-      ommersHash = BlockHeader.empty,
-      beneficiary = ByteString("0"),
+      ommersHash = BlockHeader.bEmpty256,
+      beneficiary = BlockHeader.bEmpty160,
       stateRoot = ByteString("0"),
       transactionsRoot = ByteString("0"),
       receiptsRoot = ByteString("0"),
