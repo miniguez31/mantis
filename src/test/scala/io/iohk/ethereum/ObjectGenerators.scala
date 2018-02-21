@@ -128,7 +128,7 @@ trait ObjectGenerators {
     logsBloom <- byteStringOfLengthNGen(50)
     difficulty <- bigIntGen
     number <- bigIntGen
-    gasLimit <- bigIntGen
+    gasLimit <- longGenGTC
     gasUsed <- bigIntGen
     unixTimestamp <- intGen.map(_.abs)
     extraData <- byteStringOfLengthNGen(8)

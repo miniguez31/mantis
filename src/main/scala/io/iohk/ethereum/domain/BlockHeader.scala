@@ -49,8 +49,9 @@ case class BlockHeader(
   assert(Hex.toHexString(stateRoot.toArray[Byte]).length == 64 , "Bad value for stateRoot "+Hex.toHexString(stateRoot.toArray[Byte])+" "+Hex.toHexString(stateRoot.toArray[Byte]).length)
   assert(Hex.toHexString(transactionsRoot.toArray[Byte]).length == 64 , "Bad value for transactionsRoot "+Hex.toHexString(transactionsRoot.toArray[Byte])+" "+Hex.toHexString(transactionsRoot.toArray[Byte]).length)
   assert(Hex.toHexString(receiptsRoot.toArray[Byte]).length == 64 , "Bad value for receiptsRoot "+Hex.toHexString(receiptsRoot.toArray[Byte])+" "+Hex.toHexString(receiptsRoot.toArray[Byte]).length)
-  assert(difficulty >=0, "Bad value for difficulty")// Based on validation domain/DifficultyCalculator
-  assert(number >=0, "Bad value for number")// Based on validation validators/BlockHeaderValidator
+  assert(difficulty >=0, "Bad value for difficulty "+difficulty)// Based on validation domain/DifficultyCalculator
+  assert(number >=0, "Bad value for number "+ number)// Based on validation validators/BlockHeaderValidator
+  assert(gasLimit >= 5000 && gasLimit <= Long.MaxValue, "Bad value for gasLimit "+gasLimit) // Based on validation validators/BlockHeaderValidator
   /**
     * calculates blockHash for given block header
     * @return - hash that can be used to get block bodies / receipts

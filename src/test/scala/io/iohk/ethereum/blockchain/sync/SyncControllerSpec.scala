@@ -467,7 +467,7 @@ class SyncControllerSpec extends FlatSpec with Matchers with BeforeAndAfter with
       logsBloom = BloomFilter.EmptyBloomFilter,
       difficulty = 0,
       number = 0,
-      gasLimit = 0,
+      gasLimit = 5000,
       gasUsed = 0,
       unixTimestamp = 0,
       extraData = ByteString("unused"),

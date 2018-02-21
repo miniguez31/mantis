@@ -1451,7 +1451,7 @@ class JsonRpcControllerSpec extends FlatSpec with Matchers with PropertyChecks w
       logsBloom = BloomFilter.EmptyBloomFilter,
       difficulty = 10,
       number = 2,
-      gasLimit = 0,
+      gasLimit = 5000,
       gasUsed = 0,
       unixTimestamp = 0,
       extraData = ByteString("unused"),

@@ -1,5 +1,6 @@
 # Results notes appliying DBC in BlockHeader
 
+The next precondittions were added according to http://paper.gavwood.com/
 
 * Adding precondition 256-bit hash length for parentHash
 ``` 
@@ -39,4 +40,9 @@ result: Total 1066, Failed 0, Errors 0, Passed 1066
 * Adding precondition more than or equal to 0 for number
 ```
 result: Total 1066, Failed 1, Errors 0, Passed 1065
+```
+
+* Adding precondition more than or equal to 5000 and less than 2^63-1 for gasLimit
+```
+result: Total 1066, Failed 82, Errors 0, Passed 984
 ```

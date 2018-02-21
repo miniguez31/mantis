@@ -102,7 +102,7 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
       validBlockParent.gasLimit - validBlockParent.gasLimit / GasLimitBoundDivisor + 1)
     val UpperGasLimit = validBlockParent.gasLimit + validBlockParent.gasLimit / GasLimitBoundDivisor - 1
 
-    forAll(bigIntGen) { gasLimit =>
+    forAll(longGenGTC) { gasLimit =>
       val blockHeader = validBlockHeader.copy(gasLimit = gasLimit)
       val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
       if(gasLimit < LowerGasLimit || gasLimit > UpperGasLimit)
@@ -110,11 +110,11 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
       else assert(validateResult == Right(BlockHeaderValid))
     }
   }
-
+  //This test will not be necesary because we applied a precondition in blockHeader gasLimit >= 5000 && gasLimit <= Long.MaxValue
   it should "return a failure if created with gas limit above threshold and block number >= eip106 block number" in {
     val validParent = validBlockParent.copy(gasLimit = Long.MaxValue)
-    val invalidBlockHeader = validBlockHeader.copy(gasLimit = BigInt(Long.MaxValue) + 1)
-    blockHeaderValidator.validate(invalidBlockHeader, validParent) shouldBe Left(HeaderGasLimitError)
+    val invalidBlockHeader = validBlockHeader.copy(gasLimit = BigInt(Long.MaxValue))
+    blockHeaderValidator.validate(invalidBlockHeader, validParent) shouldBe Left(HeaderPoWError)
   }
   
   it should "return a failure if created based on invalid number" in {
