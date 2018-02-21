@@ -421,7 +421,7 @@ class RegularSyncSpec extends TestKit(ActorSystem("RegularSync_system")) with Wo
       parentHash = ByteString(Hex.decode("d882d5c210bab4cb7ef0b9f3dc2130cb680959afcd9a8f9bf83ee6f13e2f9da3")),
       ommersHash = BlockHeader.bEmpty256,
       beneficiary = BlockHeader.bEmpty160,
-      stateRoot = bEmpty,
+      stateRoot = BlockHeader.bEmpty256,
       transactionsRoot = bEmpty,
       receiptsRoot = bEmpty,
       logsBloom = bEmpty,

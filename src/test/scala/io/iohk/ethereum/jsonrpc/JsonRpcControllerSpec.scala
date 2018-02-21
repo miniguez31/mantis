@@ -1445,7 +1445,7 @@ class JsonRpcControllerSpec extends FlatSpec with Matchers with PropertyChecks w
       //ommersHash = ByteString("unused"),
       ommersHash = BlockHeader.bEmpty256,
       beneficiary = BlockHeader.bEmpty160,
-      stateRoot = ByteString("unused"),
+      stateRoot = BlockHeader.bEmpty256,
       transactionsRoot = ByteString("unused"),
       receiptsRoot = ByteString("unused"),
       logsBloom = BloomFilter.EmptyBloomFilter,

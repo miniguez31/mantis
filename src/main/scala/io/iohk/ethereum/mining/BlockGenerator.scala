@@ -96,7 +96,8 @@ class BlockGenerator(blockchain: Blockchain, blockchainConfig: BlockchainConfig,
       parentHash = parent.header.hash,
       ommersHash = ByteString(kec256(ommers.toBytes: Array[Byte])),
       beneficiary = beneficiary.bytes,
-      stateRoot = ByteString.empty,
+      //stateRoot = ByteString.empty,//ByteString(0)
+      stateRoot = BlockHeader.bEmpty256,
       //we are not able to calculate transactionsRoot here because we do not know if they will fail
       transactionsRoot = ByteString.empty,
       receiptsRoot = ByteString.empty,

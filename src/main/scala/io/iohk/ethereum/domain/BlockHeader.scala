@@ -46,6 +46,8 @@ case class BlockHeader(
   assert(Hex.toHexString(parentHash.toArray[Byte]).length == 64 , "Bad value for parentHash "+Hex.toHexString(parentHash.toArray[Byte])+" "+Hex.toHexString(parentHash.toArray[Byte]).length)
   assert(Hex.toHexString(ommersHash.toArray[Byte]).length == 64 , "Bad value for ommersHash "+Hex.toHexString(ommersHash.toArray[Byte])+" "+Hex.toHexString(ommersHash.toArray[Byte]).length)
   assert(Hex.toHexString(beneficiary.toArray[Byte]).length == 40 , "Bad value for beneficiary "+Hex.toHexString(beneficiary.toArray[Byte])+" "+Hex.toHexString(beneficiary.toArray[Byte]).length)
+  assert(Hex.toHexString(stateRoot.toArray[Byte]).length == 64 , "Bad value for stateRoot "+Hex.toHexString(stateRoot.toArray[Byte])+" "+Hex.toHexString(stateRoot.toArray[Byte]).length)
+  
   /**
     * calculates blockHash for given block header
     * @return - hash that can be used to get block bodies / receipts
