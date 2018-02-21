@@ -42,14 +42,15 @@ case class BlockHeader(
        |nonce: ${Hex.toHexString(nonce.toArray[Byte])}
        |}""".stripMargin
   }
-  //Preconditions
+  //Preconditions based on validations stated in section 4.4.2 of http://paper.gavwood.com/
   assert(Hex.toHexString(parentHash.toArray[Byte]).length == 64 , "Bad value for parentHash "+Hex.toHexString(parentHash.toArray[Byte])+" "+Hex.toHexString(parentHash.toArray[Byte]).length)
   assert(Hex.toHexString(ommersHash.toArray[Byte]).length == 64 , "Bad value for ommersHash "+Hex.toHexString(ommersHash.toArray[Byte])+" "+Hex.toHexString(ommersHash.toArray[Byte]).length)
   assert(Hex.toHexString(beneficiary.toArray[Byte]).length == 40 , "Bad value for beneficiary "+Hex.toHexString(beneficiary.toArray[Byte])+" "+Hex.toHexString(beneficiary.toArray[Byte]).length)
   assert(Hex.toHexString(stateRoot.toArray[Byte]).length == 64 , "Bad value for stateRoot "+Hex.toHexString(stateRoot.toArray[Byte])+" "+Hex.toHexString(stateRoot.toArray[Byte]).length)
   assert(Hex.toHexString(transactionsRoot.toArray[Byte]).length == 64 , "Bad value for transactionsRoot "+Hex.toHexString(transactionsRoot.toArray[Byte])+" "+Hex.toHexString(transactionsRoot.toArray[Byte]).length)
   assert(Hex.toHexString(receiptsRoot.toArray[Byte]).length == 64 , "Bad value for receiptsRoot "+Hex.toHexString(receiptsRoot.toArray[Byte])+" "+Hex.toHexString(receiptsRoot.toArray[Byte]).length)
-  
+  assert(difficulty >=0, "Bad value for difficulty")// Based on validation domain/DifficultyCalculator
+  assert(number >=0, "Bad value for number")// Based on validation validators/BlockHeaderValidator
   /**
     * calculates blockHash for given block header
     * @return - hash that can be used to get block bodies / receipts

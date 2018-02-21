@@ -24,6 +24,8 @@ trait ObjectGenerators {
 
   def longGen: Gen[Long] = Gen.choose(Long.MinValue, Long.MaxValue)
 
+  def longGenGTC: Gen[Long] = Gen.choose(0, Long.MaxValue)
+
   def bigIntGen: Gen[BigInt] = byteArrayOfNItemsGen(32).map(b => new BigInteger(1, b))
 
   def randomSizeByteArrayGen(minSize: Int, maxSize: Int): Gen[Array[Byte]] = Gen.choose(minSize, maxSize).flatMap(byteArrayOfNItemsGen(_))
