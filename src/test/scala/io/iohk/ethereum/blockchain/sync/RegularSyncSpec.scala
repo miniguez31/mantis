@@ -423,7 +423,7 @@ class RegularSyncSpec extends TestKit(ActorSystem("RegularSync_system")) with Wo
       beneficiary = BlockHeader.bEmpty160,
       stateRoot = BlockHeader.bEmpty256,
       transactionsRoot = BlockHeader.bEmpty256,
-      receiptsRoot = bEmpty,
+      receiptsRoot = BlockHeader.bEmpty256,
       logsBloom = bEmpty,
       difficulty = 1000000,
       number = 1,

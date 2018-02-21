@@ -169,7 +169,7 @@ class ContractCreationSpec extends FlatSpec with PropertyChecks with Matchers {
       beneficiary = BlockHeader.bEmpty160,
       stateRoot = BlockHeader.bEmpty256,
       transactionsRoot = BlockHeader.bEmpty256,
-      receiptsRoot = bEmpty,
+      receiptsRoot = BlockHeader.bEmpty256,
       logsBloom = bEmpty,
       difficulty = 1000000,
       number = blockchainConfig.homesteadBlockNumber + 1,

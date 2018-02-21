@@ -875,7 +875,7 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
         beneficiary = BlockHeader.bEmpty160,
         stateRoot = BlockHeader.bEmpty256,
         transactionsRoot = BlockHeader.bEmpty256,
-        receiptsRoot = ByteString.empty,
+        receiptsRoot = BlockHeader.bEmpty256,
         logsBloom = ByteString.empty,
         difficulty = difficulty,
         number = 0,
@@ -911,7 +911,7 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
     val mixHash = ByteString(Hex.decode("40d9bd2064406d7f22390766d6fe5eccd2a67aa89bf218e99df35b2dbb425fb1"))
     val nonce = ByteString(Hex.decode("ce1b500070aeec4f"))
     val seedHash = ByteString(Hex.decode("00" * 32))
-    val powHash = ByteString(Hex.decode("a4e99d5df2209ae4f1273d30896cf7fa4dc1b51b88cf9f4bb28bd48b256dde6e"))
+    val powHash = ByteString(Hex.decode("3f83fa0440d2dec47ba4052294298d51b26397bce73047aafeb31435d4acce8a"))
     val target = ByteString((BigInt(2).pow(256) / difficulty).toByteArray)
 
     val v: Byte = 0x1c

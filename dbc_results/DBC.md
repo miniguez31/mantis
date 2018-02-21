@@ -25,3 +25,8 @@ result: Total 1066, Failed 215, Errors 0, Passed 851
 ```
 result: Total 1066, Failed 214, Errors 0, Passed 852
 ```
+
+* Adding precondition 256-bit hash length for receiptsRoot
+```
+Total 1066, Failed 214, Errors 0, Passed 852
+```

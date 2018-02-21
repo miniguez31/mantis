@@ -840,7 +840,7 @@ class LedgerSpec extends FlatSpec with PropertyChecks with Matchers with MockFac
       beneficiary = BlockHeader.bEmpty160,
       stateRoot = BlockHeader.bEmpty256,
       transactionsRoot = BlockHeader.bEmpty256,
-      receiptsRoot = bEmpty,
+      receiptsRoot = BlockHeader.bEmpty256,
       logsBloom = bEmpty,
       difficulty = 1000000,
       number = blockchainConfig.homesteadBlockNumber + 1,

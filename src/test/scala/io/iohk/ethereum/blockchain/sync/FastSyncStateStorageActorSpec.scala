@@ -26,7 +26,7 @@ class FastSyncStateStorageActorSpec extends AsyncFlatSpec with Matchers with Eve
     val targetBlockHeader = BlockHeader(
       ByteString(Hex.decode("d882d5c210bab4cb7ef0b9f3dc2130cb680959afcd9a8f9bf83ee6f13e2f9da3"))
     , BlockHeader.bEmpty256, BlockHeader.bEmpty160, BlockHeader.bEmpty256, BlockHeader.bEmpty256,
-      ByteString(""), ByteString(""), 0, 0, 0, 0, 0, ByteString(""), ByteString(""), ByteString(""))
+      BlockHeader.bEmpty256, ByteString(""), 0, 0, 0, 0, 0, ByteString(""), ByteString(""), ByteString(""))
     syncStateActor ! new FastSyncStateStorage(dataSource)
     (0 to maxN).foreach(n => syncStateActor ! SyncState(targetBlockHeader).copy(downloadedNodesCount = n))
 
