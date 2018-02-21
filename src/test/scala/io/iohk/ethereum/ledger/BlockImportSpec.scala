@@ -315,7 +315,7 @@ class BlockImportSpec extends FlatSpec with Matchers with MockFactory {
       ommersHash = BlockHeader.bEmpty256,
       beneficiary = BlockHeader.bEmpty160,
       stateRoot = BlockHeader.bEmpty256,
-      transactionsRoot = bEmpty,
+      transactionsRoot = BlockHeader.bEmpty256,
       receiptsRoot = bEmpty,
       logsBloom = bEmpty,
       difficulty = 100,

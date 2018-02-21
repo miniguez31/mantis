@@ -99,7 +99,7 @@ class BlockGenerator(blockchain: Blockchain, blockchainConfig: BlockchainConfig,
       //stateRoot = ByteString.empty,//ByteString(0)
       stateRoot = BlockHeader.bEmpty256,
       //we are not able to calculate transactionsRoot here because we do not know if they will fail
-      transactionsRoot = ByteString.empty,
+      transactionsRoot = BlockHeader.bEmpty256,
       receiptsRoot = ByteString.empty,
       logsBloom = ByteString.empty,
       difficulty = difficulty.calculateDifficulty(blockNumber, blockTimestamp, parent.header),
