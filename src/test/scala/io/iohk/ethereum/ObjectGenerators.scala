@@ -24,7 +24,7 @@ trait ObjectGenerators {
 
   def longGen: Gen[Long] = Gen.choose(Long.MinValue, Long.MaxValue)
 
-  def longGenGTC: Gen[Long] = Gen.choose(0, Long.MaxValue)
+  def longGenGTZ: Gen[Long] = Gen.choose(0, Long.MaxValue)
 
   def bigIntGen: Gen[BigInt] = byteArrayOfNItemsGen(32).map(b => new BigInteger(1, b))
 
@@ -128,7 +128,7 @@ trait ObjectGenerators {
     logsBloom <- byteStringOfLengthNGen(50)
     difficulty <- bigIntGen
     number <- bigIntGen
-    gasLimit <- longGenGTC
+    gasLimit <- longGenGTZ
     gasUsed <- bigIntGen
     unixTimestamp <- intGen.map(_.abs)
     extraData <- byteStringOfLengthNGen(8)

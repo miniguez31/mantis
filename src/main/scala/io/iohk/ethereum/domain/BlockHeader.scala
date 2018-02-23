@@ -5,6 +5,7 @@ import io.iohk.ethereum.crypto.kec256
 import io.iohk.ethereum.network.p2p.messages.PV62.BlockHeaderImplicits._
 import io.iohk.ethereum.rlp.{RLPList, encode => rlpEncode}
 import org.spongycastle.util.encoders.Hex
+import io.iohk.ethereum.validators.BlockHeaderValidatorImpl.{MinGasLimit => minGasLimit, MaxGasLimit => maxGasLimit}
 
 case class BlockHeader(
     parentHash: ByteString,
@@ -42,16 +43,30 @@ case class BlockHeader(
        |nonce: ${Hex.toHexString(nonce.toArray[Byte])}
        |}""".stripMargin
   }
-  //Preconditions based on validations stated in section 4.4.2 of http://paper.gavwood.com/
-  assert(Hex.toHexString(parentHash.toArray[Byte]).length == 64 , "Bad value for parentHash "+Hex.toHexString(parentHash.toArray[Byte])+" "+Hex.toHexString(parentHash.toArray[Byte]).length)
-  assert(Hex.toHexString(ommersHash.toArray[Byte]).length == 64 , "Bad value for ommersHash "+Hex.toHexString(ommersHash.toArray[Byte])+" "+Hex.toHexString(ommersHash.toArray[Byte]).length)
-  assert(Hex.toHexString(beneficiary.toArray[Byte]).length == 40 , "Bad value for beneficiary "+Hex.toHexString(beneficiary.toArray[Byte])+" "+Hex.toHexString(beneficiary.toArray[Byte]).length)
-  assert(Hex.toHexString(stateRoot.toArray[Byte]).length == 64 , "Bad value for stateRoot "+Hex.toHexString(stateRoot.toArray[Byte])+" "+Hex.toHexString(stateRoot.toArray[Byte]).length)
-  assert(Hex.toHexString(transactionsRoot.toArray[Byte]).length == 64 , "Bad value for transactionsRoot "+Hex.toHexString(transactionsRoot.toArray[Byte])+" "+Hex.toHexString(transactionsRoot.toArray[Byte]).length)
-  assert(Hex.toHexString(receiptsRoot.toArray[Byte]).length == 64 , "Bad value for receiptsRoot "+Hex.toHexString(receiptsRoot.toArray[Byte])+" "+Hex.toHexString(receiptsRoot.toArray[Byte]).length)
-  assert(difficulty >=0, "Bad value for difficulty "+difficulty)// Based on validation domain/DifficultyCalculator
-  assert(number >=0, "Bad value for number "+ number)// Based on validation validators/BlockHeaderValidator
-  assert(gasLimit >= 5000 && gasLimit <= Long.MaxValue, "Bad value for gasLimit "+gasLimit) // Based on validation validators/BlockHeaderValidator
+  //Preconditions based on validations stated in section 4.4.2 of http://paper.gavwood.com/  
+  require(validateConstructor == Right(BHValid))  
+ 
+  def validateConstructor(): Either[BHInvalid, BHValid] = {
+    for {      
+      _ <- booleanToMap(parentHash.length == 32)
+      _ <- booleanToMap(ommersHash.length == 32)
+      _ <- booleanToMap(beneficiary.length == 20)
+      _ <- booleanToMap(stateRoot.length == 32)
+      _ <- booleanToMap(transactionsRoot.length == 32)
+      _ <- booleanToMap(receiptsRoot.length == 32)
+      _ <- booleanToMap(difficulty >=0)// Based on validation domain/DifficultyCalculator
+      _ <- booleanToMap(number >=0)//Based on validation validators/BlockHeaderValidator
+      _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation validators/BlockHeaderValidator
+    } yield BHValid
+  }  
+
+  def booleanToMap(eval: Boolean): Either[BHInvalid, BHValid] = {
+    if (eval == true)
+      Right(BHValid)
+    else
+      Left(BHInvalid)
+  }
+
   /**
     * calculates blockHash for given block header
     * @return - hash that can be used to get block bodies / receipts
@@ -63,6 +78,11 @@ case class BlockHeader(
   def idTag: String =
     s"$number: $hashAsHexString"  
 }
+
+sealed trait BHInvalid
+sealed trait BHValid
+case object BHValid extends BHValid
+case object BHInvalid extends BHInvalid
 
 object BlockHeader {
 

@@ -102,7 +102,7 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
       validBlockParent.gasLimit - validBlockParent.gasLimit / GasLimitBoundDivisor + 1)
     val UpperGasLimit = validBlockParent.gasLimit + validBlockParent.gasLimit / GasLimitBoundDivisor - 1
 
-    forAll(longGenGTC) { gasLimit =>
+    forAll(longGenGTZ) { gasLimit =>
       val blockHeader = validBlockHeader.copy(gasLimit = gasLimit)
       val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
       if(gasLimit < LowerGasLimit || gasLimit > UpperGasLimit)
@@ -118,7 +118,7 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
   }
   
   it should "return a failure if created based on invalid number" in {
-    forAll(longGenGTC) { number => 
+    forAll(longGenGTZ) { number => 
       val blockHeader = validBlockHeader.copy(number = number)
       val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
       if(number != validBlockParent.number + 1)
