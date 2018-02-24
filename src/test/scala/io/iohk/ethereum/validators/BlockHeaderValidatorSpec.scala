@@ -102,31 +102,46 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
       validBlockParent.gasLimit - validBlockParent.gasLimit / GasLimitBoundDivisor + 1)
     val UpperGasLimit = validBlockParent.gasLimit + validBlockParent.gasLimit / GasLimitBoundDivisor - 1
 
-    forAll(longGenGTZ) { gasLimit =>
-      val blockHeader = validBlockHeader.copy(gasLimit = gasLimit)
-      val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
-      if(gasLimit < LowerGasLimit || gasLimit > UpperGasLimit)
-        assert(validateResult == Left(HeaderGasLimitError))
-      else assert(validateResult == Right(BlockHeaderValid))
+    forAll(bigIntGen) { gasLimit =>
+      if (gasLimit >= MinGasLimit && gasLimit <= MaxGasLimit) {
+        val blockHeader = validBlockHeader.copy(gasLimit = gasLimit)
+        val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
+        if(gasLimit < LowerGasLimit || gasLimit > UpperGasLimit)
+          assert(validateResult == Left(HeaderGasLimitError))
+        else 
+          assert(validateResult == Right(BlockHeaderValid))
+      } else {
+        val validNewBlockHeader = try(validBlockHeader.copy(gasLimit = gasLimit)) catch {case e: Exception=> e.getMessage}
+        assert(validNewBlockHeader == "requirement failed")
+      }
+      
     }
   }
   //This test will not be necesary because we applied a precondition in blockHeader gasLimit >= 5000 && gasLimit <= Long.MaxValue
   it should "return a failure if created with gas limit above threshold and block number >= eip106 block number" in {
     val validParent = validBlockParent.copy(gasLimit = Long.MaxValue)
+    val validNewBlockHeader = try(validBlockHeader.copy(gasLimit = BigInt(Long.MaxValue) + 1)) catch {case e: Exception=> e.getMessage}
+    assert(validNewBlockHeader == "requirement failed")
     val invalidBlockHeader = validBlockHeader.copy(gasLimit = BigInt(Long.MaxValue))
     blockHeaderValidator.validate(invalidBlockHeader, validParent) shouldBe Left(HeaderPoWError)
   }
   
   it should "return a failure if created based on invalid number" in {
-    forAll(longGenGTZ) { number => 
-      val blockHeader = validBlockHeader.copy(number = number)
-      val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
-      if(number != validBlockParent.number + 1)
-        assert(validateResult == Left(HeaderNumberError) || validateResult == Left(HeaderDifficultyError))
-      else assert(validateResult == Right(BlockHeaderValid))
+    forAll(longGen) { number =>       
+      if (number < 0) {
+        val validNewBlockHeader = try(validBlockHeader.copy(number = number)) catch {case e: Exception=> e.getMessage}
+        assert(validNewBlockHeader == "requirement failed")
+      } else {
+        val blockHeader = validBlockHeader.copy(number = number)
+        val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
+        if(number != validBlockParent.number + 1)
+          assert(validateResult == Left(HeaderNumberError) || validateResult == Left(HeaderDifficultyError))
+        else 
+          assert(validateResult == Right(BlockHeaderValid))
+      }            
     }
   }
-
+  
   it should "return a failure if created based on invalid nonce/mixHash" in {
     val invalidNonce = ByteString(Hex.decode("0b80f001ae0c017f"))
     val invalidMixHash = ByteString(Hex.decode("1f947f00807f7f7f2f7f00ff82ff00de015980607f129c77afedff4680c10171"))

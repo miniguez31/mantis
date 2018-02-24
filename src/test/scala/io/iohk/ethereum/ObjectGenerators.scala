@@ -10,7 +10,7 @@ import io.iohk.ethereum.mpt.{BranchNode, ExtensionNode, LeafNode, MptNode}
 import io.iohk.ethereum.domain._
 import io.iohk.ethereum.network.p2p.messages.CommonMessages.NewBlock
 import io.iohk.ethereum.network.p2p.messages.PV62.BlockBody
-
+import io.iohk.ethereum.validators.BlockHeaderValidatorImpl.{MinGasLimit => minGasLimit, MaxGasLimit => maxGasLimit}
 
 trait ObjectGenerators {
 
@@ -23,8 +23,8 @@ trait ObjectGenerators {
   def intGen: Gen[Int] = Gen.choose(Int.MinValue, Int.MaxValue)
 
   def longGen: Gen[Long] = Gen.choose(Long.MinValue, Long.MaxValue)
-
-  def longGenGTZ: Gen[Long] = Gen.choose(0, Long.MaxValue)
+  
+  def longGenBoundries: Gen[Long] = Gen.choose(minGasLimit.longValue, maxGasLimit) 
 
   def bigIntGen: Gen[BigInt] = byteArrayOfNItemsGen(32).map(b => new BigInteger(1, b))
 
@@ -128,7 +128,7 @@ trait ObjectGenerators {
     logsBloom <- byteStringOfLengthNGen(50)
     difficulty <- bigIntGen
     number <- bigIntGen
-    gasLimit <- longGenGTZ
+    gasLimit <- longGenBoundries
     gasUsed <- bigIntGen
     unixTimestamp <- intGen.map(_.abs)
     extraData <- byteStringOfLengthNGen(8)
