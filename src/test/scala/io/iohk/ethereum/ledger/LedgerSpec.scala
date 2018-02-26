@@ -506,11 +506,15 @@ class LedgerSpec extends FlatSpec with PropertyChecks with Matchers with MockFac
         minerAddress -> UpdateBalance(UInt256(blockReward))
       )
       val blockExpectedStateRoot = applyChanges(expectedStateRootTx2, blockchainStorages, changes)
-
-      val blockWithCorrectStateAndGasUsed = block.copy(
-        header = block.header.copy(stateRoot = blockExpectedStateRoot, gasUsed = gasUsedReceipt2)
-      )
-      assert(ledger.executeBlock(blockWithCorrectStateAndGasUsed).isRight)
+      if (gasUsedReceipt2 <=  block.header.gasLimit) {
+        val blockWithCorrectStateAndGasUsed = block.copy(
+          header = block.header.copy(stateRoot = blockExpectedStateRoot, gasUsed = gasUsedReceipt2)
+        )
+        assert(ledger.executeBlock(blockWithCorrectStateAndGasUsed).isRight)
+      } else {
+        val validNBH = try(block.header.copy(stateRoot = blockExpectedStateRoot, gasUsed = gasUsedReceipt2)) catch {case e: Throwable=> e}
+        assert(validNBH.isInstanceOf[java.lang.IllegalArgumentException])
+      }      
     }
   }
 

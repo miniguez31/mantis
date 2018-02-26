@@ -88,12 +88,16 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
     }
   }
 
-  it should "return a failure if created based on invalid gas used" in {
+  it should "return a failure if created based on invalid gas used" in {    
     forAll(bigIntGen) { gasUsed =>
-      val blockHeader = validBlockHeader.copy(gasUsed = gasUsed)
-      val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
-      if(gasUsed > validBlockHeader.gasLimit) assert(validateResult == Left(HeaderGasUsedError))
-      else assert(validateResult == Right(BlockHeaderValid))
+      if (validBlockHeader.gasLimit >= gasUsed) {
+        val blockHeader = validBlockHeader.copy(gasUsed = gasUsed)
+        val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
+        assert(validateResult == Right(BlockHeaderValid))
+      } else {
+        val validNewBlockHeader = try(validBlockHeader.copy(gasUsed = gasUsed)) catch {case e: Throwable=> e}
+        assert(validNewBlockHeader.isInstanceOf[java.lang.IllegalArgumentException])
+      }      
     }
   }
 

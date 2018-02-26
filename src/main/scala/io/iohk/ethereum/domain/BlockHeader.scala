@@ -45,7 +45,7 @@ case class BlockHeader(
   }
   //Preconditions based on validations stated in section 4.4.2 of http://paper.gavwood.com/  
   require(validateConstructor == Right(BHValid))  
- 
+
   def validateConstructor(): Either[BHInvalid, BHValid] = {
     for {      
       _ <- booleanToMap(parentHash.length == 32)
@@ -57,6 +57,7 @@ case class BlockHeader(
       _ <- booleanToMap(difficulty >=0)// Based on validation domain/DifficultyCalculator
       _ <- booleanToMap(number >=0)//Based on validation validators/BlockHeaderValidator
       _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation validators/BlockHeaderValidator
+      _ <- booleanToMap(gasUsed <= gasLimit)//Based on validation validators/BlockHeaderValidator
     } yield BHValid
   }  
 

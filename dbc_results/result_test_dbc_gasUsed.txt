@@ -1,0 +1,1824 @@
+[0m[[0minfo[0m] [0mLoading project definition from /Users/miniguez/Documents/MIS/Reporte_Tecnico/mantis/project[0m
+[0m[[0minfo[0m] [0mSet current project to mantis (in build file:/Users/miniguez/Documents/MIS/Reporte_Tecnico/mantis/)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /Users/miniguez/Documents/MIS/Reporte_Tecnico/mantis/target/scala-2.12/classes...[0m
+[0m[[0minfo[0m] [0m[32mBlockImportSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mImporting blocks[0m[0m
+[0m[[0minfo[0m] [0m[32m- should ignore existing block (935 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should import a block to top of the main chain (22 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle exec error when importing to top (15 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should reorganise chain when a newly enqueued block forms a better branch (130 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle error when trying to reorganise chain (38 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report an orphaned block (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should validate blocks prior to import (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBranch resolution[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report an invalid branch when headers do not form a chain (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report an invalid branch when headers do not reach the current best block number (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report an unknown branch in the parent of the first header is unknown (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report new better branch found when headers form a branch of higher difficulty than corresponding know headers (28 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report no need for a chain switch the headers do not have difficulty greater than currently known branch (23 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly handle a branch that goes up to the genesis block (20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report an unknown branch if the included genesis header is different than ours (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not include common prefix as result when finding a new better branch (22 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly import block with ommers and ancestor in block queue (48 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mAuthInitiateMessageSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mAuthInitiateMessage[0m[0m
+[0m[[0minfo[0m] [0m[32m- should encode and decode itself (100 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decode predefined message (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32mFrameCodecSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should send message and receive a response (313 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mRLPSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- nextElementIndex of empty data (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Decoding of empty data (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Decoding failure: Passing RLPValue when RLPList is expected (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Decoding failure: Passing RLPList when RLPValue is expected (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Decoding failure: Passing an RLPValue larger than expected (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Byte Encoding (47 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Short Encoding (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- String encoding (372 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Int Encoding (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Long Encoding (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- BigInt Encoding (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Byte Array Encoding (15 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Encode ByteString (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Encode Seq (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Encode Empty List (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Encode Short  List (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Encode Long  List (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Encode multilist (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Encode Empty List Of List (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Encode Rep Of Two List Of List (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- https://github.com/ethereum/tests/blob/master/rlptest.txt (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SimpleBlock encoding (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Partial Data Parse Test (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Multiple partial decode (2 milliseconds)[0m[0m
+12:04:42.328 [io-iohk-ethereum-jsonrpc-server-JsonRpcServerSpec-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mJsonRpcServerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should pass valid json request to controller (1 second, 535 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should pass valid batch json request to controller (46 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return BadRequest when malformed request is received (30 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a CORS Error (24 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should accept CORS Requests (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockHeaderSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Encoding of block header without nonce (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32mAesCtrSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mAES_CTR[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly evaluate for the test vectors (46 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decrypt encrypted random values (20 milliseconds)[0m[0m
+12:04:44.405 [personal-service-test-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:44.588 [personal-service-test-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:44.699 [personal-service-test-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:44.817 [personal-service-test-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:45.044 [personal-service-test-akka.actor.default-dispatcher-6] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:45.147 [personal-service-test-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:45.257 [personal-service-test-akka.actor.default-dispatcher-6] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:45.382 [personal-service-test-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:45.498 [personal-service-test-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:48.606 [personal-service-test-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:48.770 [personal-service-test-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:51.817 [personal-service-test-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:51.925 [personal-service-test-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.032 [personal-service-test-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.139 [personal-service-test-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.236 [personal-service-test-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.273 [personal-service-test-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.376 [personal-service-test-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.471 [personal-service-test-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.624 [personal-service-test-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.736 [personal-service-test-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.870 [personal-service-test-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:52.964 [personal-service-test-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:55.236 [personal-service-test-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:55.335 [personal-service-test-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:04:55.427 [personal-service-test-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mPersonalServiceSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mPersonalService[0m[0m
+[0m[[0minfo[0m] [0m[32m- should import private keys (250 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should create new accounts (116 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should list accounts (114 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should translate KeyStore errors to JsonRpc errors (226 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when trying to import an invalid key (112 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should unlock an account given a correct passphrase (105 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should send a transaction (given sender address and a passphrase) (122 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should send a transaction when having pending txs from the same sender (128 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to send a transaction given a wrong passphrase (3 seconds, 103 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should send a transaction (given sender address and using an unlocked account) (169 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to send a transaction when account is locked (3 seconds, 44 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should lock an unlocked account (106 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should sign a message when correct passphrase is sent (103 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should sign a message using an unlocked account (105 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error if signing a message using a locked account (103 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when signing a message if passphrase is wrong (32 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when signing if unexistent address is sent (103 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should recover address form signed message (93 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to sign and recover the same message (154 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should produce not chain specific transaction before eip155 (103 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should produce chain specific transaction after eip155 (133 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when importing a duplicated key (104 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should unlock an account given a correct passphrase for specified duration (2 seconds, 260 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete existing wallet (114 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return error when deleting not existing wallet (90 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle changing passwords (207 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mReceiptStorageSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- ReceiptStorage insert (3 seconds, 911 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ReceiptStorage delete (2 seconds, 434 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mPrecompiledContractsSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- ECDSARECOVER (355 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ECDSARECOVER_Malformed_Recovery_ID_V (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SHA256 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- RIPEMD160 (19 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- IDENTITY (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mCallOpcodesSpecPostEip161:[0m[0m
+[0m[[0minfo[0m] [0m[32mCALL[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call depth limit is reached[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call value is greater than balance[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when external contract terminates abnormally[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should modify only touched accounts in world state (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling an empty[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund call gas, add new account modifier) when transferring value to Empty Account (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas when transferring no value to Empty Account (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mCodeStorageSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- CodeStorage insert (27 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CodeStorage delete (34 milliseconds)[0m[0m
+12:05:02.571 [BlockBroadcastSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:05.631 [BlockBroadcastSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:08.667 [BlockBroadcastSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:11.704 [BlockBroadcastSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:14.740 [BlockBroadcastSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mBlockBroadcastSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should send a new block when it is not known by the peer (known by comparing total difficulties) (3 seconds, 62 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not send a new block when it is known by the peer (known by comparing total difficulties) (3 seconds, 34 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should send a new block when it is not known by the peer (known by comparing max block number) (3 seconds, 36 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not send a new block only when it is known by the peer (known by comparing max block number) (3 seconds, 37 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should send block hashes to all peers while the blocks only to sqrt of them (3 seconds, 86 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mSyncStateSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mSyncState[0m[0m
+[0m[[0minfo[0m] [0m[32m- should prepend mpt nodes when enqueueing them (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mReadOnlyNodeStorageSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mReadOnlyNodeStorage[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not update dataSource (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to read from underlying storage but not change it (19 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockRewardSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mReward Calculation[0m[0m
+[0m[[0minfo[0m] [0m[32m- should pay to the miner if no ommers included (26 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mReward[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be paid to the miner even if the account doesn't exist (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mReward Calculation[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be paid if ommers are included in block (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mReward[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be paid if ommers are included in block even if accounts don't exist (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mMerklePatriciaTrieSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- PatriciaTrie insert and get (179 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PatriciaTrie delete (220 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Trie insert should have the same root independently on the order its pairs are inserted (147 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Remove key from an empty tree (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Remove a key that does not exist (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert only one (key, value) pair to a trie and then deleted (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert two (key, value) pairs with the first hex not in common (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert two (key, value) pairs with one hex or more in common (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert two (key, value) pairs with the same key (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert 3 (key, value) pairs with different first hex (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Multiple insertions (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Multiple insertions and the removals (15 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert 3 (key-value) pairs with a common prefix (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert 2 (key-value) pairs with one hex in common and then delete one of them (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert 2 (key-value) pairs with more than one hex in common and then delete one of them (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert 2 (key-value) pairs with more than one hex in common and then delete one of them, has the same result as only adding the pair left (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert 2 (key-value) pairs with nothing in common and then delete one of them, has the same result as only adding the pair left (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Remove of a trie with an extension whose next is not on source (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Get in an empty trie (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert with an empty key in a branch node (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Remove of a key (not in trie) whose value should be in a branch node (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Remove of a key (not in trie) that should be in the child of a BranchNode that is not present (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Invalid root hash should return an error accordingly (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testDeleteCompletellyDiferentItems (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- storageHashCalc_1 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EthereumJ compatibility - Empty Trie (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EthereumJ compatibility - LeafNode Hash (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EtheruemJ compatibility - BranchNode hash (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EthereumJ compatibility - ExtensionNode hash (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EthereumJ compatibility - BranchNode with extension hash (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Using empty root as hash allow to create a MPT (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PatriciaTrie insert causes node duplicated and removal of one of them should not fail (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Creating temporal extension node already used in MPT doesn't cause missing node while pruning (20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Creating temporal leaf node already used in MPT doesn't cause missing node while pruning (11 milliseconds)[0m[0m
+12:05:18.673 [DiscoverySpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:18.882 [DiscoverySpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:19.455 [DiscoverySpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:19.506 [DiscoverySpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mPeerDiscoveryManagerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly respond to Ping Message (211 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly respond to Pong Message (571 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly respond to FindNode Message (51 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly respond to neighbours Message (64 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mEncryptedKeySpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mEncryptedKey[0m[0m
+[0m[[0minfo[0m] [0m[32m- should securely store private keys (3 seconds, 371 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decrypt a key encrypted by Geth (1 second, 614 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decrypt a key encrypted by Parity (41 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mNewBlockSpec:[0m[0m
+[0m[[0minfo[0m] [0m[31m- NewBlock messages are encoded and decoded properly *** FAILED *** (39 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[31m  IllegalArgumentException was thrown during property evaluation.[0m[0m
+[0m[[0minfo[0m] [0m[31m    Message: requirement failed[0m[0m
+[0m[[0minfo[0m] [0m[31m    Occurred when passed generated values ([0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m    )[0m[0m
+[0m[[0minfo[0m] [0m[32m- NewBlock messages are properly encoded (2 milliseconds)[0m[0m
+12:05:24.699 [PeerManagerActorSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:24.855 [PeerManagerActorSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:24.988 [PeerManagerActorSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:25.103 [PeerManagerActorSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:25.240 [PeerManagerActorSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mPeerManagerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mPeerManager[0m[0m
+[0m[[0minfo[0m] [0m[32m- should try to connect to bootstrap nodes on startup (158 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should retry connections to remaining bootstrap nodes (134 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should publish disconnect messages from peers (110 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not handle the connection from a peer that's already connected (138 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle pending and handshaked incoming peers (162 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mSignedTransactionSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mSignedTransaction[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly set pointSign for chainId with chain specific signing schema (100 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mEtcHandshakerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly connect during an apropiate handshake if no fork resolver is used (69 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should send status with total difficulty (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly connect during an apropiate handshake if a fork resolver is used and the remote peer has the DAO block (22 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly connect during an apropiate handshake if a fork resolver is used and the remote peer doesn't have the DAO block (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail if a timeout happened during hello exchange (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail if a timeout happened during status exchange (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail if a timeout happened during fork block exchange (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail if the remote peer doesn't support PV63 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail if a fork resolver is used and the block from the remote peer isn't accepted (4 milliseconds)[0m[0m
+12:05:26.026 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:26.144 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:26.202 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:26.315 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:26.420 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:26.531 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:26.609 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:26.767 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:26.880 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:27.043 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:27.147 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:27.276 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:27.390 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:27.510 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:27.624 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:27.741 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:28.176 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:28.286 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-7] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:28.398 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:28.530 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:28.644 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:28.704 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:28.760 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:28.876 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:28.990 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:29.100 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:29.211 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:29.325 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:29.444 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:32.527 [scala-execution-context-global-239] ERROR io.iohk.ethereum.jsonrpc.EthService  - failed to get transactions, mining block with empty transactions list
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://JsonRpcControllerSpec_System/system/testProbe-203#874851513]] after [3000 ms]. Sender[null] sent message of type "io.iohk.ethereum.transactions.PendingTransactionsManager$GetPendingTransactions$".
+	at akka.pattern.PromiseActorRef$.$anonfun$apply$1(AskSupport.scala:604)
+	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:126)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:864)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:109)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:103)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:862)
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:329)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:280)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:284)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:236)
+	at java.lang.Thread.run(Thread.java:745)
+12:05:32.527 [scala-execution-context-global-249] ERROR io.iohk.ethereum.jsonrpc.EthService  - failed to get ommer, mining block with empty ommers list
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://JsonRpcControllerSpec_System/system/testProbe-204#1947856299]] after [3000 ms]. Sender[null] sent message of type "io.iohk.ethereum.ommers.OmmersPool$GetOmmers".
+	at akka.pattern.PromiseActorRef$.$anonfun$apply$1(AskSupport.scala:604)
+	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:126)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:864)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:109)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:103)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:862)
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:329)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:280)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:284)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:236)
+	at java.lang.Thread.run(Thread.java:745)
+12:05:32.565 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:32.684 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:32.789 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:32.884 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:33.002 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:33.131 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:33.365 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:33.481 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:33.596 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:33.713 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:33.825 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:33.938 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.040 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.091 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.209 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.318 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.435 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.549 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.663 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.773 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.883 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:34.996 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-6] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:35.069 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:35.189 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:35.253 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:35.370 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:35.488 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:35.604 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:35.720 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:35.782 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:35.904 [JsonRpcControllerSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mJsonRpcControllerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mJsonRpcController[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle valid sha3 request (131 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail when invalid request is received (58 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle clientVersion request (113 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should Handle net_peerCount request (104 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should Handle net_listening request (111 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should Handle net_version request (68 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_protocolVersion (165 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle eth_blockNumber request (113 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_syncing (163 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should only allow to call mehtods of enabled apis (102 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle eth_getBlockTransactionCountByHash request (129 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle eth_getBlockByHash request (114 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle eth_getBlockByNumber request (117 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle eth_getUncleByBlockHashAndIndex request (115 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle eth_getUncleByBlockNumberAndIndex request (116 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle eth_getTransactionByBlockHashAndIndex request (435 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_importRawKey (109 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_newAccount (111 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_listAccounts (111 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_unlockAccount (132 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_unlockAccount for specified duration (60 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_unlockAccount should handle possible duration errors (55 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_lockAccount (115 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_sendTransaction (114 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should daedalus_deleteWallet (110 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should daedalus_changePassphrase (110 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_sendTransaction (114 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getWork (119 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getWork when fail to get ommers and transactions (3 seconds, 121 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_submitWork (119 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_submitHashrate (103 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_hashrate (92 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_gasPrice (116 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_call (129 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_estimateGas (234 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getCode (114 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getUncleCountByBlockNumber (115 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getUncleCountByBlockHash (117 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getBlockTransactionCountByNumber (115 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_coinbase (112 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getTransactionByBlockNumberAndIndex by tag (101 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getTransactionByBlockNumberAndIndex by hex number (48 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getTransactionByBlockNumberAndIndex by number (116 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getBalance (108 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getStorageAt (116 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getTransactionCount (115 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getTransactionByHash (116 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_sign (110 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_sign (109 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should personal_ecRecover (109 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_newFilter (71 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_newBlockFilter (119 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_newPendingTransactionFilter (64 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_uninstallFilter (116 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getFilterChanges (118 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getFilterLogs (114 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getLogs (117 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should rpc_modules (59 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eth_getTransactionReceipt (121 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should daedalus_getAccountTransactions (117 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mECIESCoderSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mECIESCoder[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decrypt encrypted message (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mECIESCoder[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decryptSimple encryptSimple message (18 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mECIESCoder[0m[0m
+[0m[[0minfo[0m] [0m[32m- should pass test for simple encoding from ethereumJ (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mECIESCoder[0m[0m
+[0m[[0minfo[0m] [0m[32m- should past tests from ethereumJ - test1 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mECIESCoder[0m[0m
+[0m[[0minfo[0m] [0m[32m- should past tests from ethereumJ - test2 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mBlock size[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be correct (0 milliseconds)[0m[0m
+12:05:36.122 [pool-4-thread-4-ScalaTest-running-BootstrapDownloadSpec] INFO  io.iohk.ethereum.BootstrapDownload$  - Downloaded file downloadtestrunning.zip successfully deleted
+12:05:36.125 [pool-4-thread-4-ScalaTest-running-BootstrapDownloadSpec] INFO  io.iohk.ethereum.BootstrapDownload$  - /var/folders/30/kyrlcg7s2msf3tbg893xqgnh0000gn/T/downloadtest/subfolder must end in a folder named leveldb
+[0m[[0minfo[0m] [0m[32mBootstrapDownloadSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mBootstrapDownload[0m[0m
+[0m[[0minfo[0m] [0m[32m- should download the file and generate correct hash (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should unzip the file correctly to the expected folder (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete the downloaded file (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should refuse to clean out a folder not called 'leveldb' (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should clean out the leveldb folder (remove all files) (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mEphemDataSourceSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- EphemDataSource insert (24 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EphemDataSource delete (20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EphemDataSource clear (16 milliseconds)[0m[0m
+12:05:36.259 [test-system-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:39.313 [test-system-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:42.349 [test-system-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:45.396 [test-system-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:48.445 [test-system-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:51.468 [test-system-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:54.489 [test-system-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:54.506 [test-system-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:05:54.525 [test-system-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mPeerEventBusActorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mPeerEventBusActor[0m[0m
+[0m[[0minfo[0m] [0m[32m- should relay messages received to subscribers (3 seconds, 56 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should only relay matching message codes (3 seconds, 35 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should relay peers disconnecting to its subscribers (3 seconds, 47 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should relay peers handshaked to its subscribers (3 seconds, 48 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should relay a single notification when subscribed twice to the same message code (3 seconds, 22 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to handle subscriptions using AllPeers and WithId PeerSelector at the same time (3 seconds, 20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to subscribe to new messages (17 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not change subscriptions when subscribing to empty set (18 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to unsubscribe from messages (6 seconds, 25 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mReceiptsSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mReceipts[0m[0m
+[0m[[0minfo[0m] [0m[32m- should encode receipts (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decode receipts (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decode encoded receipts (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mOpCodeGasSpecPostEip161:[0m[0m
+[0m[[0minfo[0m] [0m[32m- SELFDESTRUCT (37 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mMessageSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mMessage[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decode message from given version of protocol (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decode message redefined in newer version of protocol (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decode message available only in older version of protocol (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not decode message from older version of protocol as newer version (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not decode message not existing in given protocol (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decode wire protocol message for all versions of protocol (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mAuthHandshakerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mAuthHandshaker[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle init response (27 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle both incoming packet and a response (36 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mKeyValueStorageSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Get ints from KeyValueStorage (18 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Insert ints to KeyValueStorage (280 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Delete ints from KeyValueStorage (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Put ints into KeyValueStorage (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Remove ints from KeyValueStorage (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mIodbDataSourceTest:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to insert and retrieve stored keys (105 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to remove keys (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should remove all keys after clear (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow using multiple namespaces with the same key (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockchainSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockchain[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to store a block and return if if queried by hash (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to store a block and retrieve it by number (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to query a stored blockHeader by it's number (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not return a value if not stored (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an account given an address and a block number (11 milliseconds)[0m[0m
+12:06:01.262 [PeerActorSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:01.316 [PeerActorSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:01.354 [PeerActorSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:01.402 [PeerActorSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:04.455 [PeerActorSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:07.506 [PeerActorSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:07.555 [PeerActorSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:07.621 [PeerActorSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:07.645 [PeerActorSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:07.682 [PeerActorSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:07.708 [PeerActorSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mPeerActorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mPeerActor[0m[0m
+[0m[[0minfo[0m] [0m[32m- should create rlpx connection and send hello message (59 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should retry failed rlpx connection (37 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should try to reconnect on broken rlpx connection (46 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should successfully connect to ETC peer (3 seconds, 54 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should successfully connect to and IPv6 peer (3 seconds, 49 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should disconnect from non-ETC peer (49 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should disconnect from non-ETC peer (when node is before fork) (36 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should disconnect on Hello timeout (52 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should respond to fork block request during the handshake (37 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should stash disconnect message until handshaked (25 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should stay connected to pre fork peer (35 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mNodeParserSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly parse IPv4 nodes (1 second, 87 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly parse IPv6 nodes (2 milliseconds)[0m[0m
+12:06:08.895 [RLPxHandlerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:08.980 [RLPxHandlerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:15.036 [RLPxHandlerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:24.091 [RLPxHandlerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:27.147 [RLPxHandlerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:27.191 [RLPxHandlerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:27.243 [RLPxHandlerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mRLPxConnectionHandlerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should write messages send to TCP connection (91 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should write messages to TCP connection once all previous ACK were received (6 seconds, 54 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should accummulate messages and write them when receiving ACKs (9 seconds, 55 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should close the connection when Ack timeout happens (3 seconds, 55 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should ignore timeout of old messages (44 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should close the connection if the AuthHandshake init message's MAC is invalid (48 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should close the connection if the AuthHandshake response message's MAC is invalid (45 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mCreateOpcodeSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mCREATE[0m[0m
+[0m[[0minfo[0m] [0m[32m  when initialization code executes normally[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should create a new contract (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should update sender (creator) account (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return the new contract's address (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should step forward (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when initialization code fails[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state except for the creator's nonce (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should step forward (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when initialization code runs normally but there's not enough gas to deposit code[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume all gas passed to the init code (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state except for the creator's nonce (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call depth limit is reached[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when endowment value is greater than balance[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32minitialization includes SELFDESTRUCT opcode[0m[0m
+[0m[[0minfo[0m] [0m[32m- should refund the correct amount of gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32minitialization includes a SSTORE opcode that clears the storage[0m[0m
+[0m[[0minfo[0m] [0m[32m- should refund the correct amount of gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mmaxCodeSize check is enabled[0m[0m
+[0m[[0minfo[0m] [0m[32m- should result in an out of gas if the code is larger than the limit (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not result in an out of gas if the code is smaller than the limit (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32maccount with non-empty code already exists[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to create contract (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32maccount with non-zero nonce already exists[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to create contract (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32maccount with non-zero balance, but empty code and zero nonce, already exists[0m[0m
+[0m[[0minfo[0m] [0m[32m- should succeed in creating new contract (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mTransactionSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not recover sender public key for new sign encoding schema if there is no chain_id in signed data (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should recover sender address (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should recover sender for new sign encoding schema if there is chain_id in signed data (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should recover false sender address for invalid transaction (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not recover a sender address for transaction with invalid point sign (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should recover the correct sender for tx in block 46147 (5 milliseconds)[0m[0m
+12:06:27.418 [OmmersPoolSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:27.451 [OmmersPoolSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:06:27.477 [OmmersPoolSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mOmmersPoolSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mOmmersPool[0m[0m
+[0m[[0minfo[0m] [0m[32m- should accept ommers (35 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mOmmersPool[0m[0m
+[0m[[0minfo[0m] [0m[32m- should removes ommers ommers (24 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mOmmersPool[0m[0m
+[0m[[0minfo[0m] [0m[32m- should returns ommers when out of pool siez (23 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockValidatorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mBlock[0m[0m
+[0m[[0minfo[0m] [0m[32m- should created based on valid data (20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlock[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid transactions header (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlock[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid ommers header (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlock[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid receipts header (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlock[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid log bloom header (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlock[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if a block body doesn't corresponds to a block header due to wrong tx hash (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlock[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if a block body doesn't corresponds to a block header due to wrong ommers hash (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlock[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly handle the case where a block has no receipts (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mTotalDifficultyStorageSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- TotalDifficultyStorage insert (33 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- TotalDifficultyStorage delete (60 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mOpCodeFunSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- STOP (14 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ISZERO (29 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- NOT (18 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ADD (20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MUL (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SUB (15 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DIV (15 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SDIV (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MOD (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SMOD (14 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EXP (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SIGNEXTEND (17 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LT (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- GT (15 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SLT (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SGT (18 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EQ (44 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- AND (21 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- OR (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- XOR (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- BYTE (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ADDMOD (15 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MULMOD (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ADDRESS (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ORIGIN (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLER (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLVALUE (14 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLDATASIZE (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CODESIZE (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- GASPRICE (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- COINBASE (15 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- TIMESTAMP (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- NUMBER (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DIFFICULTY (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- GASLIMIT (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PC (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- GAS (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MSIZE (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SHA3 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- BALANCE (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLDATALOAD (36 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLDATACOPY (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CODECOPY (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EXTCODESIZE (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EXTCODECOPY (17 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- BLOCKHASH (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- POP (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MLOAD (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MSTORE (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MSTORE8 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SLOAD (50 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SSTORE (34 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- JUMP (20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- JUMPI (66 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- JUMPDEST (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH1 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH2 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH3 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH4 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH5 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH6 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH7 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH8 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH9 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH10 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH11 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH12 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH13 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH14 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH15 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH16 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH17 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH18 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH19 (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH20 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH21 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH22 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH23 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH24 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH25 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH26 (36 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH27 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH28 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH29 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH30 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH31 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH32 (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP1 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP2 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP3 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP4 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP5 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP6 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP7 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP8 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP9 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP10 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP11 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP12 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP13 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP14 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP15 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP16 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP1 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP2 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP3 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP4 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP5 (38 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP6 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP7 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP8 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP9 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP10 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP11 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP12 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP13 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP14 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP15 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP16 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG0 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG1 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG2 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG3 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG4 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- RETURN (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- INVALID (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SELFDESTRUCT (18 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- all opcodes have been registered (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- sliceBytes helper (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mCallOpcodesSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mCALL[0m[0m
+[0m[[0minfo[0m] [0m[32m  when external contract terminates normally[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should update external account's storage (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should update external account's balance (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should pass correct addresses and value (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 1 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should should store contract's return data in memory (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund unused gas) (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call depth limit is reached[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund call gas) (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call value is greater than balance[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund call gas) (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call value is zero[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should adjust gas cost (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when external contract terminates abnormally[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should should not modify world state (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume all call gas (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should extend memory (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a non-existent account[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should create new account and add to its balance (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 1 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund call gas, add new account modifier) (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a precompiled contract[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should compute a correct result (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 1 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should update precompiled contract's balance (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a program that executes a SELFDESTRUCT[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should refund the correct amount of gas (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not refund gas if account was already self destructed (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should destruct ether if own address equals refund address (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a program that executes a SSTORE that clears the storage[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should refund the correct amount of gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when more gas than available is provided[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should go OOG before EIP-150 (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should cap the provided gas after EIP-150 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should go OOG before EIP-150 becaouse of extensive memory cost (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should cap memory cost post EIP-150 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mCALLCODE[0m[0m
+[0m[[0minfo[0m] [0m[32m  when external code terminates normally[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should update own account's storage (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not update any account's balance (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should pass correct addresses and value (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 1 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should should store contract's return data in memory (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund unused gas) (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call depth limit is reached[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund call gas) (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call value is greater than balance[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund call gas) (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call value is zero[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should adjust gas cost (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when external code terminates abnormally[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume all call gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should extend memory (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when external account does not exist[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 1 (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund call gas) (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a precompiled contract[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should compute a correct result (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 1 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not update precompiled contract's balance (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a program that executes a SELFDESTRUCT[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should refund the correct amount of gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a program that executes a SSTORE that clears the storage[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should refund the correct amount of gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when more gas than available is provided[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should go OOG before EIP-150 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should cap the provided gas after EIP-150 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mDELEGATECALL[0m[0m
+[0m[[0minfo[0m] [0m[32m  when external code terminates normally[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should update own account's storage (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not update any account's balance (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should pass correct addresses and value (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 1 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should should store contract's return data in memory (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund unused gas) (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when call depth limit is reached[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund call gas) (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when external code terminates abnormally[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 0 (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume all call gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should extend memory (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when external account does not exist[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not modify world state (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 1 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (refund call gas) (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a precompiled contract[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should compute a correct result (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return 1 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should not update precompiled contract's balance (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should consume correct gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a program that executes a SELFDESTRUCT[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should refund the correct amount of gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when calling a program that executes a SSTORE that clears the storage[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should refund the correct amount of gas (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when more gas than available is provided[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should go OOG before EIP-150 (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should cap the provided gas after EIP-150 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mgas cost bigger than available gas DELEGATECALL[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an OutOfGas error (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mCallOpCodes[0m[0m
+[0m[[0minfo[0m] [0m[32m  when CALL processes returned data[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle memory expansion properly (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when CALLCODE processes returned data[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle memory expansion properly (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when DELEGATECALL processes returned data[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle memory expansion properly (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mEthashSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mEthash[0m[0m
+[0m[[0minfo[0m] [0m[32m- should generate correct hash (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should calculate cache size (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should compute proof of work using cache (1 minute, 31 seconds)[0m[0m
+12:08:01.223 [test-system-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:04.489 [test-system-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:07.598 [test-system-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:07.726 [test-system-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:14.015 [test-system-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:20.187 [test-system-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:21.893 [test-system-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:22.014 [test-system-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mPendingTransactionsManagerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mPendingTransactionsManager[0m[0m
+[0m[[0minfo[0m] [0m[32m- should store pending transactions received from peers (3 seconds, 270 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should ignore known transaction (3 seconds, 109 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should broadcast received pending transactions to other peers (127 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should notify other peers about received transactions and handle removal (6 seconds, 288 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not add pending transaction again when it was removed while waiting for peers (6 seconds, 172 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should override transactions with the same sender and nonce (1 second, 704 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should broadcast pending transactions to newly connected peers (123 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should remove transaction on timeout (722 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mStackSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- pop single element (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- pop multiple elements (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- push single element (14 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- push multiple elements (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- duplicate element (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- swap elements (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mMinerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mMiner[0m[0m
+12:08:22.858 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:22.966 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.059 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.154 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.207 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.295 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.386 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.426 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.515 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.608 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.698 [PeersInfoHolderSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mEtcPeerManagerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should start with the peers initial info as provided (107 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should update max peer when receiving new block (91 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should update max peer when receiving block header (95 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should update max peer when receiving new block hashes (51 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should update max peer when sending new block (87 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should update max peer when sending block header (91 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should update max peer when sending new block hashes (40 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should update the peer total difficulty when receiving a NewBlock (89 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should update the fork accepted when receiving the fork block (91 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should disconnect from a peer with different fork block (90 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should remove peers information when a peers is disconnected (89 milliseconds)[0m[0m
+12:08:23.838 [FilterManagerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.901 [FilterManagerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.932 [FilterManagerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:23.959 [FilterManagerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:24.049 [FilterManagerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mFilterManagerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mFilterManager[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle log filter logs and changes (67 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle pending block filter (30 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle block filter (29 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle pending transactions filter (89 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should timeout unused filter (3 seconds, 101 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mNodeStorageSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- NodeStorage insert (134 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- NodeStorage delete (81 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mLevelDBDataSourceTest:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to insert and retrieve stored keys (346 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to remove keys (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should remove all keys after clear (25 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow using multiple namespaces with the same key (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mLedgerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mLedger[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly calculate the total gas refund to be returned to the sender and paying for gas to the miner (72 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly change the nonce when executing a tx that results in contract creation (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly change the nonce when executing a tx that results in a message call (30 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly run executeBlockTransactions for a block without txs (14 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly run executeBlockTransactions for a block with one tx (that produces no errors) (105 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly run executeBlockTransactions for a block with one tx (that produces OutOfGas) (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly run executeBlock for a valid block without txs (28 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to run executeBlock if a block is invalid before executing it (22 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to run executeBlock if a block is invalid after executing it (26 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[31m- should correctly run a block with more than one tx *** FAILED *** (48 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[31m  IllegalArgumentException was thrown during property evaluation. (LedgerSpec.scala:434)[0m[0m
+[0m[[0minfo[0m] [0m[31m    Message: requirement failed[0m[0m
+[0m[[0minfo[0m] [0m[31m    Occurred at table row 0 (zero based, not counting headings), which had values ([0m[0m
+[0m[[0minfo[0m] [0m[31m      origin1Address = 0x2f52d0233e0e18cdc87c83d1943d61fd66facc6f,[0m[0m
+[0m[[0minfo[0m] [0m[31m      receiver1Address = 0x000000000000000000000000000000000000029a,[0m[0m
+[0m[[0minfo[0m] [0m[31m      origin2Address = 0xa60862686a043dd21693cbf8e801fdd8f371ae77,[0m[0m
+[0m[[0minfo[0m] [0m[31m      receiver2Address = 0x000000000000000000000000000000000000029a[0m[0m
+[0m[[0minfo[0m] [0m[31m    )[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to create an account and not run out of gas before Homestead (17 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should run out of gas in contract creation after Homestead (14 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should clear logs only if vm execution results in an error (102 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly send the transaction input data whether it's a contract creation or not (26 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should should handle pre-existing and new destination accounts when processing a contract init transaction (27 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should create sender account if it does not exists (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should remember executed transaction in case of many failures in the middle (38 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should produce empty block if all txs fail (20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should drain DAO accounts and send the funds to refund address if Pro DAO Fork was configured (50 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should neither drain DAO accounts nor send the funds to refund address if Pro DAO Fork was not configured (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly determine current block status (21 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should properly find minimal required gas limit to execute transaction (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mScryptSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mscrypt[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly evaluate for the test vectors (232 milliseconds)[0m[0m
+12:08:28.841 [PeerActorSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:28.909 [PeerActorSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:28.961 [PeerActorSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:28.992 [PeerActorSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.044 [PeerActorSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.096 [PeerActorSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mPeerActorHandshakingSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should succeed in establishing connection if the handshake is always successful (67 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail in establishing connection if the handshake always fails (51 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should succeed in establishing connection in simple Hello exchange (31 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail in establishing connection in simple Hello exchange if timeout happened (51 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail in establishing connection in simple Hello exchange if a Status message was received (49 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should ignore unhandled message while establishing connection (65 milliseconds)[0m[0m
+12:08:29.182 [BlockchainHostActor_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.231 [BlockchainHostActor_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.252 [BlockchainHostActor_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.291 [BlockchainHostActor_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.326 [BlockchainHostActor_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.361 [BlockchainHostActor_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.400 [BlockchainHostActor_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.436 [BlockchainHostActor_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.470 [BlockchainHostActor_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.507 [BlockchainHostActor_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.545 [BlockchainHostActor_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:29.586 [BlockchainHostActor_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mBlockchainHostActorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return Receipts for block hashes (50 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return BlockBodies for block hashes (20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return block headers by block number (38 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return block headers by block number when response is shorter then what was requested (36 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return block headers by block number in reverse order (34 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return block headers by block hash (39 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return block headers by block hash when skipping headers (36 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return block headers in reverse when there are skipped blocks (35 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return block headers in reverse when there are skipped blocks and we are asking for blocks before genesis (35 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return block headers in reverse when there are skipped blocks ending at genesis (36 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return evm code for hash (43 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return mptNode for hash (32 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mECDSASignatureSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mECDSASignature[0m[0m
+[0m[[0minfo[0m] [0m[32m- should recover public key correctly for go ethereum transaction (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail on case from transaction 74c45d0cf2332cc021bebdfee6b1c1da0b58e8f4154537adb79b025f722920a4 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should sign message and recover public key (154 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mDeleteTouchedAccountsSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete no accounts when there are no touched accounts (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete no accounts when there are no empty touched accounts (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete touched empty account (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete touched empty account after transfer to self (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not mark for deletion and delete any account pre EIP161 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete multiple touched empty accounts (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not delete touched new account resulting from contract creation (initialised) (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mDeleteAccountsSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete no accounts when none of them should be deleted (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete the accounts listed for deletion (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete all the accounts if they are all listed for deletion (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete account that had storage updated before (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mAsymmetricCipherKeyPairLoaderSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly save the AsymmetricCipherKeyPairLoader (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mProgramSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should detect all jump destinations if there are no push op (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should detect all jump destinations if there are push op (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should detect all jump destinations if there are invalid ops (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should detect all instructions as jump destinations if they are (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mInMemorySimpleMapProxySpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mInMemoryTrieProxy[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not write inserts until commit (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mInMemoryTrieProxy[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not perform removals until commit (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mInMemoryTrieProxy[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not write updates until commit (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mInMemoryTrieProxy[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle sequential operations (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32mInMemoryTrieProxy[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle batch operations (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32mInMemoryTrieProxy[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not fail when deleting an inexistent value (0 milliseconds)[0m[0m
+12:08:30.036 [KnownNodesManagerSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:30.089 [KnownNodesManagerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mKnownNodesManagerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mKnownNodesManager[0m[0m
+[0m[[0minfo[0m] [0m[32m- should keep a list of nodes and persist changes (48 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should respect max nodes limit (31 milliseconds)[0m[0m
+12:08:30.117 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:08:30.343 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$+ - Received 0 block headers in 0 ms (branch resolution: false)
+12:08:30.394 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$~ - Received 0 block headers in 0 ms (branch resolution: false)
+12:08:30.476 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$ab - Received 0 block headers in 0 ms (branch resolution: false)
+12:08:34.571 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$bb - Received 0 block headers in 0 ms (branch resolution: false)
+12:08:37.654 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$cb - Received 0 block headers in 0 ms (branch resolution: false)
+12:08:41.740 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$db - Received 0 block headers in 0 ms (branch resolution: false)
+12:08:41.819 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$eb - Received 0 block headers in 0 ms (branch resolution: false)
+12:08:41.890 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$fb - Received 0 block headers in 0 ms (branch resolution: false)
+12:08:41.976 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$gb - Received 0 block headers in 0 ms (branch resolution: false)
+12:08:42.234 [RegularSync_system-akka.actor.default-dispatcher-2] WARN  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$jb - Mined block is a duplicate, this should never happen
+12:08:49.419 [RegularSync_system-akka.actor.default-dispatcher-2] WARN  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$lb - Failed to execute mined block because of error
+12:08:53.571 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$mb - Received 2 block headers in 0 ms (branch resolution: false)
+12:08:53.681 [RegularSync_system-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$nb - Received 2 block headers in 0 ms (branch resolution: false)
+12:08:53.835 [RegularSync_system-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$ob - Received 10 block headers in 0 ms (branch resolution: false)
+12:08:55.036 [RegularSync_system-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$pb - Received 10 block headers in 0 ms (branch resolution: false)
+12:08:56.046 [RegularSync_system-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$pb - Received 2 block headers in 0 ms (branch resolution: true)
+12:08:57.212 [RegularSync_system-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$qb - Received 10 block headers in 0 ms (branch resolution: false)
+12:08:58.222 [RegularSync_system-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$qb - Received 2 block headers in 0 ms (branch resolution: true)
+12:08:59.369 [RegularSync_system-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$rb - Received 10 block headers in 0 ms (branch resolution: false)
+12:09:00.468 [RegularSync_system-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$sb - Received 2 block headers in 0 ms (branch resolution: false)
+12:09:01.562 [RegularSync_system-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$tb - Received 1 block headers in 0 ms (branch resolution: false)
+12:09:01.563 [RegularSync_system-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$tb - Received 1 block bodies in 0 ms
+12:09:01.581 [RegularSync_system-akka.actor.default-dispatcher-3] ERROR i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$tb - Requesting missing state nodes
+io.iohk.ethereum.mpt.MerklePatriciaTrie$MissingNodeException: Node not found ccb1f717aa77602faf03a594761a36956b1c4cf44c6b336d1db57da799b331b8, trie is inconsistent
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec$$anon$22.$anonfun$new$39(RegularSyncSpec.scala:367)
+	at org.scalamock.MockFactoryBase.inContext(MockFactoryBase.scala:113)
+	at org.scalamock.MockFactoryBase.inSequence(MockFactoryBase.scala:70)
+	at org.scalamock.MockFactoryBase.inSequence$(MockFactoryBase.scala:69)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.inSequence(RegularSyncSpec.scala:33)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec$$anon$22.<init>(RegularSyncSpec.scala:365)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.$anonfun$new$38(RegularSyncSpec.scala:360)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.WordSpecLike$$anon$1.apply(WordSpecLike.scala:1078)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.org$scalamock$scalatest$AbstractMockFactory$$super$withFixture(RegularSyncSpec.scala:33)
+	at org.scalamock.scalatest.AbstractMockFactory.$anonfun$withFixture$1(AbstractMockFactory.scala:35)
+	at org.scalamock.MockFactoryBase.withExpectations(MockFactoryBase.scala:53)
+	at org.scalamock.MockFactoryBase.withExpectations$(MockFactoryBase.scala:45)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.withExpectations(RegularSyncSpec.scala:33)
+	at org.scalamock.scalatest.AbstractMockFactory.withFixture(AbstractMockFactory.scala:34)
+	at org.scalamock.scalatest.AbstractMockFactory.withFixture$(AbstractMockFactory.scala:31)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.withFixture(RegularSyncSpec.scala:33)
+	at org.scalatest.WordSpecLike.invokeWithFixture$1(WordSpecLike.scala:1076)
+	at org.scalatest.WordSpecLike.$anonfun$runTest$1(WordSpecLike.scala:1088)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:289)
+	at org.scalatest.WordSpecLike.runTest(WordSpecLike.scala:1088)
+	at org.scalatest.WordSpecLike.runTest$(WordSpecLike.scala:1070)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.runTest(RegularSyncSpec.scala:33)
+	at org.scalatest.WordSpecLike.$anonfun$runTests$1(WordSpecLike.scala:1147)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:396)
+	at scala.collection.immutable.List.foreach(List.scala:378)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:384)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:373)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:410)
+	at scala.collection.immutable.List.foreach(List.scala:378)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:384)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:373)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:410)
+	at scala.collection.immutable.List.foreach(List.scala:378)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:384)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:379)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:461)
+	at org.scalatest.WordSpecLike.runTests(WordSpecLike.scala:1147)
+	at org.scalatest.WordSpecLike.runTests$(WordSpecLike.scala:1146)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.runTests(RegularSyncSpec.scala:33)
+	at org.scalatest.Suite.run(Suite.scala:1147)
+	at org.scalatest.Suite.run$(Suite.scala:1129)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.org$scalatest$WordSpecLike$$super$run(RegularSyncSpec.scala:33)
+	at org.scalatest.WordSpecLike.$anonfun$run$1(WordSpecLike.scala:1192)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:521)
+	at org.scalatest.WordSpecLike.run(WordSpecLike.scala:1192)
+	at org.scalatest.WordSpecLike.run$(WordSpecLike.scala:1190)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.org$scalatest$BeforeAndAfterAll$$super$run(RegularSyncSpec.scala:33)
+	at org.scalatest.BeforeAndAfterAll.liftedTree1$1(BeforeAndAfterAll.scala:213)
+	at org.scalatest.BeforeAndAfterAll.run(BeforeAndAfterAll.scala:210)
+	at org.scalatest.BeforeAndAfterAll.run$(BeforeAndAfterAll.scala:208)
+	at io.iohk.ethereum.blockchain.sync.RegularSyncSpec.run(RegularSyncSpec.scala:33)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:314)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:507)
+	at sbt.TestRunner.runTest$1(TestFramework.scala:76)
+	at sbt.TestRunner.run(TestFramework.scala:85)
+	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
+	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
+	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:185)
+	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
+	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
+	at sbt.TestFunction.apply(TestFramework.scala:207)
+	at sbt.Tests$.sbt$Tests$$processRunnable$1(Tests.scala:239)
+	at sbt.Tests$$anonfun$makeSerial$1.apply(Tests.scala:245)
+	at sbt.Tests$$anonfun$makeSerial$1.apply(Tests.scala:245)
+	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
+	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:237)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+12:09:02.591 [RegularSync_system-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$tb - Received 1 missing state nodes in 0 ms
+12:09:02.592 [RegularSync_system-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.RegularSync akka://RegularSync_system/user/$$tb - Inserted missing state node: ccb1f717aa77602faf03a594761a36956b1c4cf44c6b336d1db57da799b331b8. Retrying execution starting with block 1
+[0m[[0minfo[0m] [0m[32mRegularSyncSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mRegularSync[0m[0m
+[0m[[0minfo[0m] [0m[32m  when receiving NewBlock msg[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle import to the main chain (112 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle chain reorganisation (41 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle duplicate (4 seconds, 96 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle enqueuing (3 seconds, 87 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle block error (4 seconds, 89 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when receiving NewBlockHashes msg[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle newBlockHash message (77 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should filter out hashes that are already in chain or queue (73 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should blacklist peer sending ancient blockhashes (70 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle at most 64 new hashes in one request (92 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when receiving MinedBlock msg[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle import to the main chain (85 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle chain reorganisation (85 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle duplicate (4 seconds, 93 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle enqueuing (3 seconds, 88 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle block error (4 seconds, 100 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when receiving BlockHeaders msg[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle a new better branch (146 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle no branch change (96 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle unknown branch about to be resolved (1 second, 164 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle unknown branch that can't be resolved (2 seconds, 212 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return to normal syncing mode after successful branch resolution (2 seconds, 170 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return to normal syncing mode after branch resolution request failed (1 second, 148 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle invalid branch (1 second, 100 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when receiving BlockBodies msg[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should handle missing state nodes (2 seconds, 122 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mOpCodeGasSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- wordsForBytes helper (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- calcMemCost helper (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP1 (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP2 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP3 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP4 (27 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP5 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP6 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP7 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP8 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP9 (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP10 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP11 (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP12 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP13 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP14 (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP15 (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SWAP16 (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH1 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH2 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH3 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH4 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH5 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH6 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH7 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH8 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH9 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH10 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH11 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH12 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH13 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH14 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH15 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH16 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH17 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH18 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH19 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH20 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH21 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH22 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH23 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH24 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH25 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH26 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH27 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH28 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH29 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH30 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH31 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PUSH32 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP1 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP2 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP3 (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP4 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP5 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP6 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP7 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP8 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP9 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP10 (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP11 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP12 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP13 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP14 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP15 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DUP16 (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- STOP (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ADD (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MUL (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SUB (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DIV (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SDIV (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MOD (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SMOD (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ADDMOD (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MULMOD (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SIGNEXTEND (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LT (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- GT (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SLT (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SGT (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EQ (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ISZERO (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- AND (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- OR (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- XOR (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- NOT (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- BYTE (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ADDRESS (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- BALANCE (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ORIGIN (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLER (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLVALUE (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLDATALOAD (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLDATASIZE (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CODESIZE (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- GASPRICE (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EXTCODESIZE (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- BLOCKHASH (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- COINBASE (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- TIMESTAMP (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- NUMBER (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- DIFFICULTY (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- GASLIMIT (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- POP (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SLOAD (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- JUMP (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- JUMPI (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- PC (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MSIZE (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- GAS (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- JUMPDEST (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EXP (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SHA3 (17 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CALLDATACOPY (21 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- CODECOPY (26 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- EXTCODECOPY (26 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MLOAD (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MSTORE (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- MSTORE8 (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SSTORE (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG0 (8 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG1 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG2 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG3 (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- LOG4 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- RETURN (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- SELFDESTRUCT (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- all opcodes have been registered (31 milliseconds)[0m[0m
+12:09:04.750 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:04.823 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:04.896 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:04.964 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.030 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.095 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.158 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.227 [EthServiceSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.294 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.425 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.553 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.626 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.700 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.756 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.830 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.856 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:05.926 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.001 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.072 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.140 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.195 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.249 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.320 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.388 [EthServiceSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.452 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.521 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.592 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.654 [EthServiceSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.727 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.853 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:06.978 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:07.112 [EthServiceSpec_System-akka.actor.default-dispatcher-6] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:07.241 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:07.292 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:07.419 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:07.550 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:07.666 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:07.825 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:07.939 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:08.072 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:08.201 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:08.276 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:08.868 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:08.955 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:09.027 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:09.093 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:09.674 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:09.733 [EthServiceSpec_System-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:09.861 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:09.992 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:10.066 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:10.138 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:10.209 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:10.342 [EthServiceSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:10.471 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:10.603 [EthServiceSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:10.741 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:10.874 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:11.010 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:11.137 [EthServiceSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:09:11.291 [EthServiceSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mEthServiceSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mEthService[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_blockNumber with the latest block number (84 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return ethereum protocol version (71 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockTransactionCountByHash with None when the requested block isn't in the blockchain (68 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockTransactionCountByHash with the block has no tx when the requested block is in the blockchain and has no tx (67 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockTransactionCountByHash correctly when the requested block is in the blockchain and has some tx (65 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getTransactionByBlockHashAndIndex with None when there is no block with the requested hash (63 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getTransactionByBlockHashAndIndex with None when there is no tx in requested index (67 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getTransactionByBlockHashAndIndex with the transaction response correctly when the requested index has one (66 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByNumber with the correct block when the pending block is requested (130 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByNumber with the latest block pending block is requested and there are no pending ones (126 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByNumber with None when the requested block isn't in the blockchain (73 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByNumber with the block response correctly when it's totalDifficulty is in blockchain (74 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByNumber with the block response correctly when it's totalDifficulty is not in blockchain (57 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByNumber with the block response correctly when the txs should be hashed (73 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByHash with None when the requested block isn't in the blockchain (26 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByHash with the block response correctly when it's totalDifficulty is in blockchain (70 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByHash with the block response correctly when it's totalDifficulty is not in blockchain (75 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getBlockByHash with the block response correctly when the txs should be hashed (70 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getUncleByBlockHashAndIndex with None when the requested block isn't in the blockchain (67 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getUncleByBlockHashAndIndex with None when there's no uncle (54 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getUncleByBlockHashAndIndex with None when there's no uncle in the requested index (54 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getUncleByBlockHashAndIndex correctly when the requested index has one but there's no total difficulty for it (71 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should anwer eth_getUncleByBlockHashAndIndex correctly when the requested index has one and there's total difficulty for it (65 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getUncleByBlockNumberAndIndex with None when the requested block isn't in the blockchain (64 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getUncleByBlockNumberAndIndex with None when there's no uncle (67 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getUncleByBlockNumberAndIndex with None when there's no uncle in the requested index (70 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should answer eth_getUncleByBlockNumberAndIndex correctly when the requested index has one but there's no total difficulty for it (62 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should anwer eth_getUncleByBlockNumberAndIndex correctly when the requested index has one and there's total difficulty for it (71 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return syncing info if the peer is syncing (126 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return no syncing info if the peer is not syncing (124 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return requested work (134 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should accept submitted correct PoW (130 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should reject submitted correct PoW when header is no longer in cache (53 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should execute call and return a value (126 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should execute estimateGas and return a value (129 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should get uncle count by block number (116 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should get uncle count by block hash (159 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should get transaction count by block number (114 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should get transaction count by latest block number (130 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle getCode request (130 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should accept and report hashrate (75 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should combine hashrates from many miners and remove timed out rates (590 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return if node is mining base on getWork (86 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return if node is mining base on submitWork (73 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return if node is mining base on submitHashRate (65 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return if node is mining after time out (578 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return correct coinbase (60 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return 0 gas price if there are no transactions (129 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return average gas price (128 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should getTransactionByBlockNumberAndIndexRequest return transaction by index (74 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should getTransactionByBlockNumberAndIndexRequest return empty response if transaction does not exists when getting by index (73 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should getTransactionByBlockNumberAndIndexRequest return empty response if block does not exists when getting by index (70 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle getBalance request (132 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle getStorageAt request (131 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle get transaction count request (130 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle get transaction by hash if the tx is not on the blockchain and not in the tx pool (137 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle get transaction by hash if the tx is still pending (132 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle get transaction by hash if the tx was already executed (136 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should calculate correct contract address for contract creating by transaction (128 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return account recent transactions in newest -> oldest order (152 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not return account recent transactions from older blocks and return pending txs (140 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mInMemoryWorldStateProxySpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mInMemoryWorldStateProxy[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to create and retrieve an account (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to save and retrieve code (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to save and get storage (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to transfer value to other address (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not store within contract store if value is zero (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should storing a zero on a contract store position should remove it from the underlying tree (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to persist changes and continue working after that (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to do transfers with the same origin and destination (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not allow transfer to create empty accounts post EIP161 (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly mark touched accounts post EIP161 (18 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should update touched accounts using combineTouchedAccounts method (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly determine if account is dead (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should remove all ether from existing account (2 milliseconds)[0m[0m
+12:09:11.959 [scala-execution-context-global-870] ERROR io.iohk.ethereum.jsonrpc.EthService  - failed to get ommer, mining block with empty ommers list
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://EthServiceSpec_System/system/testProbe-839#571655797]] after [3000 ms]. Sender[null] sent message of type "io.iohk.ethereum.ommers.OmmersPool$GetOmmers".
+	at akka.pattern.PromiseActorRef$.$anonfun$apply$1(AskSupport.scala:604)
+	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:126)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:864)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:109)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:103)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:862)
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:329)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:280)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:284)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:236)
+	at java.lang.Thread.run(Thread.java:745)
+12:09:11.960 [scala-execution-context-global-869] ERROR io.iohk.ethereum.jsonrpc.EthService  - failed to get transactions, mining block with empty transactions list
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://EthServiceSpec_System/system/testProbe-838#-2056098203]] after [3000 ms]. Sender[null] sent message of type "io.iohk.ethereum.transactions.PendingTransactionsManager$GetPendingTransactions$".
+	at akka.pattern.PromiseActorRef$.$anonfun$apply$1(AskSupport.scala:604)
+	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:126)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:864)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:109)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:103)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:862)
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:329)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:280)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:284)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:236)
+	at java.lang.Thread.run(Thread.java:745)
+12:09:12.173 [scala-execution-context-global-869] ERROR io.iohk.ethereum.jsonrpc.EthService  - failed to get ommer, mining block with empty ommers list
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://EthServiceSpec_System/system/testProbe-851#-1093349388]] after [3000 ms]. Sender[null] sent message of type "io.iohk.ethereum.ommers.OmmersPool$GetOmmers".
+	at akka.pattern.PromiseActorRef$.$anonfun$apply$1(AskSupport.scala:604)
+	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:126)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:864)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:109)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:103)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:862)
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:329)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:280)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:284)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:236)
+	at java.lang.Thread.run(Thread.java:745)
+12:09:12.173 [scala-execution-context-global-870] ERROR io.iohk.ethereum.jsonrpc.EthService  - failed to get transactions, mining block with empty transactions list
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://EthServiceSpec_System/system/testProbe-850#1979825878]] after [3000 ms]. Sender[null] sent message of type "io.iohk.ethereum.transactions.PendingTransactionsManager$GetPendingTransactions$".
+	at akka.pattern.PromiseActorRef$.$anonfun$apply$1(AskSupport.scala:604)
+	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:126)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:864)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:109)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:103)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:862)
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:329)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:280)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:284)
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:236)
+	at java.lang.Thread.run(Thread.java:745)
+[0m[[0minfo[0m] [0m[32mExpiringMapSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should Put element in, for correct amount of time and not retain it afterwards (107 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should Put element in, for negative duration (element will be inaccessible and removed at first occasion) (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should Put new element in with new holdTime, for correct amount of time and not retain it afterwards (220 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should Put two elements in, for different amount of time and not retain it afterwards (157 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should Put element in, for default amount of time and not retain it afterwards (111 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should Put element in, until some time and not retain it afterwards (111 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not overflow and throw exception when adding duration with max seconds (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should It should remove existing element (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should It should overwrite existing element (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockQueueSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockQueue[0m[0m
+[0m[[0minfo[0m] [0m[32m- should ignore block if it's already in the queue (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should ignore blocks outside of range (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should remove the blocks that fall out of range (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should enqueue a block with parent on the main chain updating its total difficulty (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should enqueue a block with queued ancestors rooted to the main chain updating its total difficulty (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should enqueue an orphaned block (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should remove a branch from a leaf up to the first shared ancestor (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should remove a whole subtree down from an ancestor to all its leaves (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mHexPrefixSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- HexPrefix encoding (6 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactEncodeOddCompact (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactEncodeEvenCompact (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactEncodeEvenTerminated (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactEncodeOddTerminated (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactDecodeOddCompact (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactDecodeEvenCompact (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactDecodeEvenTerminated (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactDecodeOddTerminated (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactHexEncode_1 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactHexEncode_2 (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- testCompactHexEncode_3 (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32mKeyStoreImplSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mKeyStoreImpl[0m[0m
+[0m[[0minfo[0m] [0m[32m- should import and list accounts (8 seconds, 408 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to import a key twice (5 seconds, 133 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should create new accounts (5 seconds, 107 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when the keystore dir cannot be initialized (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when the keystore dir cannot be read or written (5 seconds, 81 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should unlock an account provided a correct passphrase (5 seconds, 218 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when unlocking an account with a wrong passphrase (5 seconds, 28 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when trying to unlock an unknown account (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error deleting not existing wallet (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should delete existing wallet (2 seconds, 647 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should change passphrase of an existing wallet (10 seconds, 323 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when changing passphrase of an non-existent wallet (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error when changing passphrase and provided with invalid old passphrase (5 seconds, 876 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mMessagesSerializationSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mWire Protocol[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding Hello[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding Disconnect[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding Ping[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding Pong[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mCommon Messages[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding Status[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding SignedTransactions[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (19 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding NewBlock[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (59 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mPV61[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding NewBlockHashes[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding BlockHashesFromNumber[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mPV62[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding NewBlockHashes[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding BlockBodies[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (47 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding GetBlockBodies[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding BlockHeaders[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m  when encoding and decoding GetBlockHeaders[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return same result (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mSignedTransactionValidatorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as valid a tx from before homestead (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as valid a tx from after homestead (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as syntactic invalid a tx with long nonce (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as syntactic invalid a tx with long gas limit (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as syntactic invalid a tx with long gas price (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as syntactic invalid a tx with long value (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as syntactic invalid a tx with long s (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as syntactic invalid a tx with long r (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report a tx with invalid r as having invalid signature (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report a tx with invalid s as having invalid signature (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as invalid a tx with invalid nonce (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as invalid a tx with too low gas limit for intrinsic gas (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as invalid a tx with upfront cost higher than the sender's balance (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as invalid a tx with too high gas limit for block gas limit (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as invalid a chain specific tx before eip155 (11 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as valid a chain specific tx after eip155 (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mReferenceCountNodeStorageSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mReferenceCountNodeStorage[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not remove a key if no more references until pruning (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not remove a key that was inserted after deletion when pruning (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not remove a key that it's still referenced when pruning (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not delete a key that's was referenced in later blocks when pruning (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not throw an error when deleting a key that does not exist (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow to rollback operations (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should allow rollbacks after pruning (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mRipemd160Spec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- RIPEMD-160 (134 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mNodeDataSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mNodeData[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be encoded properly (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be decoded properly (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be decoded previously encoded value (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decode branch node with values in leafs that looks like RLP list (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should obtain the same value when decoding and encoding an encoded node (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mUInt256Spec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- & (9 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- | (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ^ (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ~ (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- negation (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- + (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- - (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- * (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- / (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- div (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- sdiv (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- mod (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- smod (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- addmod (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- mulmod (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- ** (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- signExtend (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- slt (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- sgt (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- getByte (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- intValue (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- comparison (18 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Passing too long ByteString should throw an exception (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- UInt256 converted to a byte array should always have length 32 bytes (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- 2-way bytes conversion (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- byteSize (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mPbkdf2HMacSha256Spec:[0m[0m
+[0m[[0minfo[0m] [0m[32mpbkdf2HMacSha256[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly evaluate for the test vectors (35 milliseconds)[0m[0m
+12:10:05.953 [FastSyncStateActorSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mFastSyncStateStorageActorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mFastSyncStateActor[0m[0m
+[0m[[0minfo[0m] [0m[32m- should eventually persist a newest state of a fast sync (71 milliseconds)[0m[0m
+12:10:06.061 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:10:06.167 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$vb/fast-sync - Trying to start block synchronization (fast mode)
+12:10:06.183 [SyncControllerSpec_System-akka.actor.default-dispatcher-4] INFO  i.i.e.b.s.FastSyncTargetBlockSelector akka://SyncControllerSpec_System/user/$$vb/fast-sync/target-block-selector - Block synchronization (fast mode) not started. Need at least 2 peers, but there are only 0 available at the moment. Retrying in 500 milliseconds
+12:10:06.714 [SyncControllerSpec_System-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$vb/fast-sync - Starting block synchronization (fast mode), target block 399500
+12:10:09.760 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:10:10.845 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$wb/fast-sync - Trying to start block synchronization (fast mode)
+12:10:10.845 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$wb/fast-sync - Starting block synchronization (fast mode), target block 399500
+12:10:11.860 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$wb/fast-sync - Received 1 state nodes in 1 ms
+12:10:13.851 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$wb/fast-sync - Received 1 block headers in 1 ms
+12:10:15.969 [SyncControllerSpec_System-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$wb/fast-sync - Received 1 receipts in 97 ms
+12:10:16.079 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$wb/fast-sync - Received 1 block bodies in 99 ms
+12:10:16.088 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$wb/fast-sync - Block synchronization in fast mode finished, switching to regular mode
+12:10:16.090 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.RegularSync akka://SyncControllerSpec_System/user/$$wb/regular-sync - Starting block synchronization
+12:10:17.118 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:10:18.200 [SyncControllerSpec_System-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$xb/fast-sync - Trying to start block synchronization (fast mode)
+12:10:18.201 [SyncControllerSpec_System-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$xb/fast-sync - Starting block synchronization (fast mode), target block 399500
+12:10:19.218 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$xb/fast-sync - Received 1 state nodes in 0 ms
+12:10:21.421 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$xb/fast-sync - Received 1 block headers in 203 ms
+12:10:21.435 [SyncControllerSpec_System-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:10:22.517 [SyncControllerSpec_System-akka.actor.default-dispatcher-6] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$yb/fast-sync - Trying to start block synchronization (fast mode)
+12:10:22.518 [SyncControllerSpec_System-akka.actor.default-dispatcher-4] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$yb/fast-sync - Starting block synchronization (fast mode), target block 399500
+12:10:35.606 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:10:36.727 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$zb/fast-sync - Trying to start block synchronization (fast mode)
+12:10:36.728 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.b.s.FastSyncTargetBlockSelector akka://SyncControllerSpec_System/user/$$zb/fast-sync/target-block-selector - Block synchronization (fast mode) not started. Need at least 2 peers, but there are only 0 available at the moment. Retrying in 500 milliseconds
+12:10:37.262 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:10:37.335 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$Ab - Trying to start block synchronization (fast mode)
+12:10:37.336 [SyncControllerSpec_System-akka.actor.default-dispatcher-2] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$Ab - Starting block synchronization (fast mode), target block 3125369
+12:10:38.353 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$Ab - Received 0 block bodies in 1 ms
+12:10:39.390 [SyncControllerSpec_System-akka.actor.default-dispatcher-6] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:10:39.463 [SyncControllerSpec_System-akka.actor.default-dispatcher-6] WARN  i.i.e.blockchain.sync.SyncController akka://SyncControllerSpec_System/user/$$Bb - do-fast-sync is set to false but regular sync cannot start because fast sync hasn't completed
+12:10:39.465 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$Bb/fast-sync - Trying to start block synchronization (fast mode)
+12:10:39.465 [SyncControllerSpec_System-akka.actor.default-dispatcher-3] INFO  i.i.e.blockchain.sync.FastSync akka://SyncControllerSpec_System/user/$$Bb/fast-sync - Starting block synchronization (fast mode), target block 3125369
+[0m[[0minfo[0m] [0m[32mSyncControllerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mSyncController[0m[0m
+[0m[[0minfo[0m] [0m[32m- should download target block and request state nodes (3 seconds, 679 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should download target block, request state, blocks and finish when downloaded (7 seconds, 341 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should throttle requests to peer (4 seconds, 303 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not use (blacklist) a peer that fails to respond within time limit (14 seconds, 146 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should only use ETC peer to choose target block (1 second, 640 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should re-enqueue block bodies when empty response is received (2 seconds, 106 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should start fast sync after restart, if fast sync was partially ran and then regular sync started (1 second, 89 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mOmmersValidatorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should validate correctly a valid list of ommers (9 seconds, 98 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report a failure if the list of ommers is too big (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report a failure if there is an invalid header in the list of ommers (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report a failure if there is an ommer that was previously used (35 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report a failure if there is an ommer which is of the last ancestors (35 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report a failure if there is an ommer too old (28 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report a failure if there is a duplicated ommer in the ommer list (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mMemorySpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Store a Byte (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Store an UInt256 (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Store an Array[Byte] (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Store a ByteString (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Load an UInt256 (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Load a ByteString (3 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Correctly increase memory size when storing (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Correctly increase memory size when loading (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Correctly increase memory size when expanding (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mTransactionMappingStorageSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- TransactionMappingStorage insert (34 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- TransactionMappingStorage delete (39 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mAesCbcSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mAES_CBC[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly evaluate for the test vectors (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should decrypt encrypted random values (6 milliseconds)[0m[0m
+12:10:49.905 [Testsystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:10:50.004 [Testsystem-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+12:10:50.042 [Testsystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger  - Slf4jLogger started
+[0m[[0minfo[0m] [0m[32mNetServiceSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mNetService[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return handshaked peer count (100 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return listening response (39 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return version response (37 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockHeaderValidatorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockHeaderValidator[0m[0m
+[0m[[0minfo[0m] [0m[32m- should validate correctly formed BlockHeaders (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid extra data (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should validate DAO block (extra data) (1 minute, 21 seconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid timestamp (12 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid difficulty (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[31m- should return a failure if created based on invalid gas used *** FAILED *** (530 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[31m  TestFailedException was thrown during property evaluation.[0m[0m
+[0m[[0minfo[0m] [0m[31m    Message: Left(HeaderPoWError) did not equal Right(BlockHeaderValid)[0m[0m
+[0m[[0minfo[0m] [0m[31m    Location: (BlockHeaderValidatorSpec.scala:96)[0m[0m
+[0m[[0minfo[0m] [0m[31m    Occurred when passed generated values ([0m[0m
+[0m[[0minfo[0m] [0m[31m      arg0 = 1 // 254 shrinks[0m[0m
+[0m[[0minfo[0m] [0m[31m    )[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid gas limit (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created with gas limit above threshold and block number >= eip106 block number (16 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid number (1 second, 155 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if created based on invalid nonce/mixHash (47 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should validate correctly a block whose parent is in storage (30 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a failure if the parent's header is not in storage (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should properly validate a block after difficulty bomb pause (22 seconds, 41 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should properly calculate the difficulty after difficulty bomb resume (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32mContractCreationSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mLedger[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an error if new contract's code size is larger than the limit (5 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not return an error if new contract's code size is smaller than the limit (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to execute contract creation code in case of address conflict (non-empty code) (18 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to execute contract creation code in case of address conflict (non-zero nonce) (13 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should succeed in creating a contract if the account already has some balance, but zero nonce and empty code (34 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should initialise a new contract account with zero nonce before EIP-161 (20 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should initialise a new contract account with incremented nonce after EIP-161 (12 milliseconds)[0m[0m
+12:12:35.240 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Using custom genesis data from: test-genesis.json
+12:12:35.278 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Genesis data successfully loaded
+12:12:35.356 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Using custom genesis data from: test-genesis.json
+12:12:35.358 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Genesis data successfully loaded
+12:12:35.435 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Using custom genesis data from: test-genesis.json
+12:12:35.438 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Genesis data successfully loaded
+12:12:35.526 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Using custom genesis data from: test-genesis.json
+12:12:35.529 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Genesis data successfully loaded
+12:12:35.614 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Using custom genesis data from: test-genesis.json
+12:12:35.616 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Genesis data successfully loaded
+12:12:35.714 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Using custom genesis data from: test-genesis.json
+12:12:35.717 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Genesis data successfully loaded
+12:12:35.795 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Using custom genesis data from: test-genesis.json
+12:12:35.797 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Genesis data successfully loaded
+12:12:35.882 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Using custom genesis data from: test-genesis.json
+12:12:35.885 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Genesis data successfully loaded
+12:12:35.995 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Using custom genesis data from: test-genesis.json
+12:12:35.998 [pool-4-thread-4-ScalaTest-running-BlockGeneratorSpec] INFO  i.i.e.b.data.GenesisDataLoader  - Genesis data successfully loaded
+[0m[[0minfo[0m] [0m[32mBlockGeneratorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockGenerator[0m[0m
+[0m[[0minfo[0m] [0m[32m- should generate correct block with empty transactions (128 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should generate correct block with transactions (79 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should filter out failing transactions (91 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should filter out transactions exceeding block gas limit and include correct transactions (86 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should generate block before eip155 and filter out chain specific tx (100 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should generate block after eip155 and allow both chain specific and general transactions (80 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should include consecutive transactions from single sender (88 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should filter out failing transaction from the middle of tx list (112 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should include transaction with higher gas price if nonce is the same (75 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mValidationsAfterExecutionSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report valid results from execution as correct (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as invalid a block that doesn't have the correct gas used (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as invalid a block that doesn't have the correct state root hash (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should report as invalid a block that doesn't have the correct receipts information (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBloomFilterSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should properly create the bloom filter for without logs (1 millisecond)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should properly create the bloom filter for with one log entry with one topic (0 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should properly create the bloom filter for with many logs (2 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockRewardCalculatorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mBlockRewardCalculator[0m[0m
+[0m[[0minfo[0m] [0m[32m- should correctly calculate block and ommer rewards (4 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be compliant with ECIP1039 for block reward including zero, one or two, uncles until 50 era (7 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be compliant with ECIP1039 for block reward including two uncles until 200 era (10 milliseconds)[0m[0m
+[0m[[0minfo[0m] [0mScalaTest[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 7 minutes, 58 seconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 1066[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 93, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 1063, failed 3, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[31m*** 3 TESTS FAILED ***[0m[0m
+[0m[[31merror[0m] [0mFailed: Total 1066, Failed 3, Errors 0, Passed 1063[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	io.iohk.ethereum.ledger.LedgerSpec[0m
+[0m[[31merror[0m] [0m	io.iohk.ethereum.network.p2p.messages.NewBlockSpec[0m
+[0m[[31merror[0m] [0m	io.iohk.ethereum.validators.BlockHeaderValidatorSpec[0m
+[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[31merror[0m] [0mTotal time: 493 s, completed Feb 26, 2018 12:12:37 PM[0m

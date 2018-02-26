@@ -46,3 +46,7 @@ result: Total 1066, Failed 1, Errors 0, Passed 1065
 ```
 result: Total 1066, Failed 82, Errors 0, Passed 984
 ```
+* Adding precondition less than or equal to gasLimit for gasUsed
+```
+result: Total 1066, Failed 3, Errors 0, Passed 1063
+```

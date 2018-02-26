@@ -145,7 +145,7 @@ trait ObjectGenerators {
     difficulty = difficulty,
     number = number,
     gasLimit = gasLimit,
-    gasUsed = gasUsed,
+    gasUsed = gasLimit,
     unixTimestamp = unixTimestamp,
     extraData = extraData,
     mixHash = mixHash,
