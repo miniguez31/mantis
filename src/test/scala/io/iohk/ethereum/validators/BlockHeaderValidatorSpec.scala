@@ -111,8 +111,8 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
         else 
           assert(validateResult == Right(BlockHeaderValid))
       } else {
-        val validNewBlockHeader = try(validBlockHeader.copy(gasLimit = gasLimit)) catch {case e: Exception=> e.getMessage}
-        assert(validNewBlockHeader == "requirement failed")
+        val validNewBlockHeader = try(validBlockHeader.copy(gasLimit = gasLimit)) catch {case e: Throwable=> e}
+        assert(validNewBlockHeader.isInstanceOf[java.lang.IllegalArgumentException])
       }
       
     }
@@ -120,8 +120,8 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
   //This test will not be necesary because we applied a precondition in blockHeader gasLimit >= 5000 && gasLimit <= Long.MaxValue
   it should "return a failure if created with gas limit above threshold and block number >= eip106 block number" in {
     val validParent = validBlockParent.copy(gasLimit = Long.MaxValue)
-    val validNewBlockHeader = try(validBlockHeader.copy(gasLimit = BigInt(Long.MaxValue) + 1)) catch {case e: Exception=> e.getMessage}
-    assert(validNewBlockHeader == "requirement failed")
+    val validNewBlockHeader = try(validBlockHeader.copy(gasLimit = BigInt(Long.MaxValue) + 1)) catch {case e: Throwable=> e}    
+    assert(validNewBlockHeader.isInstanceOf[java.lang.IllegalArgumentException])
     val invalidBlockHeader = validBlockHeader.copy(gasLimit = BigInt(Long.MaxValue))
     blockHeaderValidator.validate(invalidBlockHeader, validParent) shouldBe Left(HeaderPoWError)
   }
@@ -129,8 +129,8 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
   it should "return a failure if created based on invalid number" in {
     forAll(longGen) { number =>       
       if (number < 0) {
-        val validNewBlockHeader = try(validBlockHeader.copy(number = number)) catch {case e: Exception=> e.getMessage}
-        assert(validNewBlockHeader == "requirement failed")
+        val validNewBlockHeader = try(validBlockHeader.copy(number = number)) catch {case e: Throwable=> e}        
+        assert(validNewBlockHeader.isInstanceOf[java.lang.IllegalArgumentException])
       } else {
         val blockHeader = validBlockHeader.copy(number = number)
         val validateResult = blockHeaderValidator.validate(blockHeader, validBlockParent)
