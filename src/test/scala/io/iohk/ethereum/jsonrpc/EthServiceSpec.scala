@@ -385,7 +385,7 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
     (blockGenerator.getPrepared _).expects(headerHash).returning(Some(PendingBlock(block, Nil)))
     (appStateStorage.getBestBlockNumber _).expects().returning(0)
 
-    val req = SubmitWorkRequest(ByteString("nonce"), headerHash, ByteString(Hex.decode("01" * 32)))
+    val req = SubmitWorkRequest(BlockHeader.bEmpty64, headerHash, ByteString(Hex.decode("01" * 32)))
 
     val response = ethService.submitWork(req)
     response.futureValue shouldEqual Right(SubmitWorkResponse(true))
@@ -884,7 +884,7 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
         unixTimestamp = 1494604900,
         extraData = ByteString.empty,
         mixHash = BlockHeader.bEmpty256,
-        nonce = ByteString.empty
+        nonce = BlockHeader.bEmpty64
       ),
       body = BlockBody(Nil, Nil)
     )
@@ -904,14 +904,14 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
         unixTimestamp = 1494604913,
         extraData = ByteString(Hex.decode("6d696e6564207769746820657463207363616c61")),
         mixHash = BlockHeader.bEmpty256,
-        nonce = ByteString.empty
+        nonce = BlockHeader.bEmpty64
       ),
       body = BlockBody(Nil, Nil)
     )
     val mixHash = ByteString(Hex.decode("40d9bd2064406d7f22390766d6fe5eccd2a67aa89bf218e99df35b2dbb425fb1"))
     val nonce = ByteString(Hex.decode("ce1b500070aeec4f"))
     val seedHash = ByteString(Hex.decode("00" * 32))
-    val powHash = ByteString(Hex.decode("4779cdb895c15379e2cf1e9350ecb82a8bfe8a89c98db5ead58cf84b752782be"))
+    val powHash = ByteString(Hex.decode("b5c31c9ec7b57de77dacc210ab96eab77eebd9157d7b89e70518b1790ba3ec76"))
     val target = ByteString((BigInt(2).pow(256) / difficulty).toByteArray)
 
     val v: Byte = 0x1c

@@ -182,7 +182,7 @@ class BlockQueueSpec extends FlatSpec with Matchers with MockFactory {
       unixTimestamp = 0,
       extraData = bEmpty,
       mixHash = BlockHeader.bEmpty256,
-      nonce = bEmpty
+      nonce = BlockHeader.bEmpty64
     )
 
     def getBlock(

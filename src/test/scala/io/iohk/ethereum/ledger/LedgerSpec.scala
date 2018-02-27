@@ -853,7 +853,7 @@ class LedgerSpec extends FlatSpec with PropertyChecks with Matchers with MockFac
       unixTimestamp = 1486752441,
       extraData = bEmpty,
       mixHash = BlockHeader.bEmpty256,
-      nonce = bEmpty
+      nonce = BlockHeader.bEmpty64
     )
 
     val defaultTx = Transaction(

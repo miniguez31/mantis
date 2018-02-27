@@ -325,7 +325,7 @@ class BlockImportSpec extends FlatSpec with Matchers with MockFactory {
       unixTimestamp = 0,
       extraData = bEmpty,
       mixHash = BlockHeader.bEmpty256,
-      nonce = bEmpty
+      nonce = BlockHeader.bEmpty64
     )
 
     val genesisHeader = defaultHeader.copy(number = 0, extraData = ByteString("genesis"))

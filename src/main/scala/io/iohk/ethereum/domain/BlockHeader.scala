@@ -43,7 +43,7 @@ case class BlockHeader(
        |nonce: ${Hex.toHexString(nonce.toArray[Byte])}
        |}""".stripMargin
   }
-  //Preconditions based on validations stated in section 4.4.2 of http://paper.gavwood.com/  
+  //Preconditions based on validations stated in section 4.4.2 of http://paper.gavwood.com/    
   require(validateConstructor == Right(BHValid))    
 
   def validateConstructor(): Either[BHInvalid, BHValid] = {
@@ -60,6 +60,7 @@ case class BlockHeader(
       _ <- booleanToMap(gasUsed <= gasLimit)//Based on validation validators/BlockHeaderValidator
       _ <- booleanToMap(extraData.length <= MaxExtraDataSize)
       _ <- booleanToMap(mixHash.length == 32)
+      _ <- booleanToMap(nonce.length == 8)
     } yield BHValid
   }  
 
@@ -99,4 +100,5 @@ object BlockHeader {
   //BlockHeader empties
   def bEmpty256: ByteString = ByteString(Hex.decode("0"*64))
   def bEmpty160: ByteString = ByteString(Hex.decode("0"*40))
+  def bEmpty64:  ByteString = ByteString(Hex.decode("0"*16))
 }

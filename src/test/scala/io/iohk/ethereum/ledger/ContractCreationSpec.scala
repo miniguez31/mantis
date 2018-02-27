@@ -178,7 +178,7 @@ class ContractCreationSpec extends FlatSpec with PropertyChecks with Matchers {
       unixTimestamp = 0,
       extraData = bEmpty,
       mixHash = BlockHeader.bEmpty256,
-      nonce = bEmpty
+      nonce = BlockHeader.bEmpty64
     )
 
     // code returns a single STOP instruction

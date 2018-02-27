@@ -58,3 +58,7 @@ result: Total 1066, Failed 1, Errors 0, Passed 1065
 ```
 Total 1066, Failed 222, Errors 0, Passed 844
 ```
+* Adding precondition 64-bit hash length for nonce
+```
+Total 1066, Failed 221, Errors 0, Passed 845
+```

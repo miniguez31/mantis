@@ -189,7 +189,7 @@ class PeerActorSpec extends FlatSpec with Matchers {
       BlockHeader.bEmpty256, BlockHeader.bEmpty160, BlockHeader.bEmpty256,
       BlockHeader.bEmpty256, BlockHeader.bEmpty256, ByteString("unused"),
       daoForkBlockTotalDifficulty + 100000, 3000000 ,5000, 0, 0,
-      ByteString("unused"),BlockHeader.bEmpty256,ByteString("unused"))
+      ByteString("unused"),BlockHeader.bEmpty256,BlockHeader.bEmpty64)
     storagesInstance.storages.appStateStorage.putBestBlockNumber(3000000) // after the fork
     blockchain.save(header)
     storagesInstance.storages.blockNumberMappingStorage.put(3000000, header.hash)
@@ -375,7 +375,7 @@ class PeerActorSpec extends FlatSpec with Matchers {
         unixTimestamp = 1469020839L,
         extraData = ByteString("unused"),
         mixHash = BlockHeader.bEmpty256,
-        nonce = ByteString("unused"))
+        nonce = BlockHeader.bEmpty64)
   }
 
   trait NodeStatusSetup extends SecureRandomBuilder with EphemBlockchainTestSetup {
@@ -405,7 +405,7 @@ class PeerActorSpec extends FlatSpec with Matchers {
       unixTimestamp = 0,
       extraData = ByteString("0"),
       mixHash = BlockHeader.bEmpty256,
-      nonce = ByteString("0"))
+      nonce = BlockHeader.bEmpty64)
 
     val testGenesisBlockBody: BlockBody = BlockBody(Nil, Nil)
 
