@@ -50,3 +50,7 @@ result: Total 1066, Failed 82, Errors 0, Passed 984
 ```
 result: Total 1066, Failed 3, Errors 0, Passed 1063
 ```
+* Adding precondition 32 bytes or fewer for extraData
+```
+result: Total 1066, Failed 1, Errors 0, Passed 1065
+```

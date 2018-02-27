@@ -5,7 +5,7 @@ import io.iohk.ethereum.crypto.kec256
 import io.iohk.ethereum.network.p2p.messages.PV62.BlockHeaderImplicits._
 import io.iohk.ethereum.rlp.{RLPList, encode => rlpEncode}
 import org.spongycastle.util.encoders.Hex
-import io.iohk.ethereum.validators.BlockHeaderValidatorImpl.{MinGasLimit => minGasLimit, MaxGasLimit => maxGasLimit}
+import io.iohk.ethereum.validators.BlockHeaderValidatorImpl.{MinGasLimit => minGasLimit, MaxGasLimit => maxGasLimit, MaxExtraDataSize}
 
 case class BlockHeader(
     parentHash: ByteString,
@@ -19,7 +19,7 @@ case class BlockHeader(
     number: BigInt,
     gasLimit: BigInt,
     gasUsed: BigInt,
-    unixTimestamp: Long,
+    unixTimestamp: Long,//it's validating in BlockHeaderValidator
     extraData: ByteString,
     mixHash: ByteString,
     nonce: ByteString) {
@@ -44,7 +44,7 @@ case class BlockHeader(
        |}""".stripMargin
   }
   //Preconditions based on validations stated in section 4.4.2 of http://paper.gavwood.com/  
-  require(validateConstructor == Right(BHValid))  
+  require(validateConstructor == Right(BHValid))    
 
   def validateConstructor(): Either[BHInvalid, BHValid] = {
     for {      
@@ -58,6 +58,7 @@ case class BlockHeader(
       _ <- booleanToMap(number >=0)//Based on validation validators/BlockHeaderValidator
       _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation validators/BlockHeaderValidator
       _ <- booleanToMap(gasUsed <= gasLimit)//Based on validation validators/BlockHeaderValidator
+      _ <- booleanToMap(extraData.length <= MaxExtraDataSize)
     } yield BHValid
   }  
 

@@ -36,9 +36,9 @@ class BlockHeaderValidatorSpec extends FlatSpec with Matchers with PropertyCheck
     forAll(randomSizeByteStringGen(
       MaxExtraDataSize + 1,
       MaxExtraDataSize + ExtraDataSizeLimit)
-    ) { wrongExtraData =>
-      val invalidBlockHeader = validBlockHeader.copy(extraData = wrongExtraData)
-      assert(blockHeaderValidator.validate(invalidBlockHeader, validBlockParent) == Left(HeaderExtraDataError))
+    ) { wrongExtraData =>      
+        val invalidBlockHeader = try(validBlockHeader.copy(extraData = wrongExtraData)) catch {case e: Throwable=> e}
+        assert(invalidBlockHeader.isInstanceOf[java.lang.IllegalArgumentException])
     }
   }
 
