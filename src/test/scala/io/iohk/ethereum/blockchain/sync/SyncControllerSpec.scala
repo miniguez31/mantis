@@ -471,7 +471,7 @@ class SyncControllerSpec extends FlatSpec with Matchers with BeforeAndAfter with
       gasUsed = 0,
       unixTimestamp = 0,
       extraData = ByteString("unused"),
-      mixHash = ByteString("unused"),
+      mixHash = BlockHeader.bEmpty256,
       nonce = ByteString("unused"))
 
     blockchain.save(baseBlockHeader.parentHash, BigInt(0))

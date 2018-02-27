@@ -108,7 +108,7 @@ class BlockGenerator(blockchain: Blockchain, blockchainConfig: BlockchainConfig,
       gasUsed = 0,
       unixTimestamp = blockTimestamp,
       extraData = daoForkConfig.flatMap(daoForkConfig => daoForkConfig.getExtraData(blockNumber)).getOrElse(miningConfig.headerExtraData),
-      mixHash = ByteString.empty,
+      mixHash = BlockHeader.bEmpty256,
       nonce = ByteString.empty
     )
   }

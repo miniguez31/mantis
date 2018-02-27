@@ -852,7 +852,7 @@ class LedgerSpec extends FlatSpec with PropertyChecks with Matchers with MockFac
       gasUsed = 0,
       unixTimestamp = 1486752441,
       extraData = bEmpty,
-      mixHash = bEmpty,
+      mixHash = BlockHeader.bEmpty256,
       nonce = bEmpty
     )
 

@@ -132,7 +132,7 @@ trait ObjectGenerators {
     gasUsed <- bigIntGen
     unixTimestamp <- intGen.map(_.abs)
     extraData <- byteStringOfLengthNGen(8)
-    mixHash <- byteStringOfLengthNGen(8)
+    mixHash <- byteStringOfLengthNGen(32)
     nonce <- byteStringOfLengthNGen(8)
   } yield BlockHeader(
     parentHash = parentHash,

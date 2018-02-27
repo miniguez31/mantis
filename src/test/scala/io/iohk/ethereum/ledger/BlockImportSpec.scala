@@ -324,7 +324,7 @@ class BlockImportSpec extends FlatSpec with Matchers with MockFactory {
       gasUsed = 0,
       unixTimestamp = 0,
       extraData = bEmpty,
-      mixHash = bEmpty,
+      mixHash = BlockHeader.bEmpty256,
       nonce = bEmpty
     )
 

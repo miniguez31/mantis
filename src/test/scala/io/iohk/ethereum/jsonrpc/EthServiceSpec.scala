@@ -883,7 +883,7 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
         gasUsed = 0,
         unixTimestamp = 1494604900,
         extraData = ByteString.empty,
-        mixHash = ByteString.empty,
+        mixHash = BlockHeader.bEmpty256,
         nonce = ByteString.empty
       ),
       body = BlockBody(Nil, Nil)
@@ -903,7 +903,7 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
         gasUsed = 0,
         unixTimestamp = 1494604913,
         extraData = ByteString(Hex.decode("6d696e6564207769746820657463207363616c61")),
-        mixHash = ByteString.empty,
+        mixHash = BlockHeader.bEmpty256,
         nonce = ByteString.empty
       ),
       body = BlockBody(Nil, Nil)
@@ -911,7 +911,7 @@ class EthServiceSpec extends FlatSpec with Matchers with ScalaFutures with MockF
     val mixHash = ByteString(Hex.decode("40d9bd2064406d7f22390766d6fe5eccd2a67aa89bf218e99df35b2dbb425fb1"))
     val nonce = ByteString(Hex.decode("ce1b500070aeec4f"))
     val seedHash = ByteString(Hex.decode("00" * 32))
-    val powHash = ByteString(Hex.decode("3f83fa0440d2dec47ba4052294298d51b26397bce73047aafeb31435d4acce8a"))
+    val powHash = ByteString(Hex.decode("4779cdb895c15379e2cf1e9350ecb82a8bfe8a89c98db5ead58cf84b752782be"))
     val target = ByteString((BigInt(2).pow(256) / difficulty).toByteArray)
 
     val v: Byte = 0x1c

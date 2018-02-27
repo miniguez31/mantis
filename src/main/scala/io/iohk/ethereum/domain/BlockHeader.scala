@@ -59,6 +59,7 @@ case class BlockHeader(
       _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation validators/BlockHeaderValidator
       _ <- booleanToMap(gasUsed <= gasLimit)//Based on validation validators/BlockHeaderValidator
       _ <- booleanToMap(extraData.length <= MaxExtraDataSize)
+      _ <- booleanToMap(mixHash.length == 32)
     } yield BHValid
   }  
 

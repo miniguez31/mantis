@@ -431,7 +431,7 @@ class RegularSyncSpec extends TestKit(ActorSystem("RegularSync_system")) with Wo
       gasUsed = 0,
       unixTimestamp = 0,
       extraData = bEmpty,
-      mixHash = bEmpty,
+      mixHash = BlockHeader.bEmpty256,
       nonce = bEmpty
     )
 
