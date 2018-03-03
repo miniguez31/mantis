@@ -43,24 +43,27 @@ case class BlockHeader(
        |nonce: ${Hex.toHexString(nonce.toArray[Byte])}
        |}""".stripMargin
   }
-  //Preconditions based on validations stated in section 4.4.2 of http://paper.gavwood.com/    
+  val hash256: Int = 32
+  val hash160: Int = 20
+  val hash64: Int = 8
+      
   require(validateConstructor == Right(BHValid))    
 
   def validateConstructor(): Either[BHInvalid, BHValid] = {
     for {      
-      _ <- booleanToMap(parentHash.length == 32)
-      _ <- booleanToMap(ommersHash.length == 32)
-      _ <- booleanToMap(beneficiary.length == 20)
-      _ <- booleanToMap(stateRoot.length == 32)
-      _ <- booleanToMap(transactionsRoot.length == 32)
-      _ <- booleanToMap(receiptsRoot.length == 32)
-      _ <- booleanToMap(difficulty >=0)// Based on validation domain/DifficultyCalculator
-      _ <- booleanToMap(number >=0)//Based on validation validators/BlockHeaderValidator
-      _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation validators/BlockHeaderValidator
-      _ <- booleanToMap(gasUsed <= gasLimit)//Based on validation validators/BlockHeaderValidator
-      _ <- booleanToMap(extraData.length <= MaxExtraDataSize)
-      _ <- booleanToMap(mixHash.length == 32)
-      _ <- booleanToMap(nonce.length == 8)
+      _ <- booleanToMap(parentHash.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(ommersHash.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(beneficiary.length == hash160) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(stateRoot.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(transactionsRoot.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(receiptsRoot.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(difficulty >=0)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(number >=0)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(gasUsed >=0 && gasUsed <= gasLimit)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(extraData.length <= MaxExtraDataSize)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(mixHash.length == hash256)//Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(nonce.length == hash64)//Based on stated in section 4.4 of http://paper.gavwood.com/
     } yield BHValid
   }  
 
@@ -78,7 +81,8 @@ case class BlockHeader(
   lazy val hash: ByteString = ByteString(kec256(this.toBytes: Array[Byte]))
 
   lazy val hashAsHexString: String = Hex.toHexString(hash.toArray)
-
+  
+   
   def idTag: String =
     s"$number: $hashAsHexString"  
 }
