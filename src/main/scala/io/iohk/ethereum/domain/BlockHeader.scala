@@ -6,6 +6,9 @@ import io.iohk.ethereum.network.p2p.messages.PV62.BlockHeaderImplicits._
 import io.iohk.ethereum.rlp.{RLPList, encode => rlpEncode}
 import org.spongycastle.util.encoders.Hex
 import io.iohk.ethereum.validators.BlockHeaderValidatorImpl.{MinGasLimit => minGasLimit, MaxGasLimit => maxGasLimit, MaxExtraDataSize}
+import eu.timepit.refined._
+import eu.timepit.refined.auto._
+import eu.timepit.refined.string._
 
 case class BlockHeader(
     parentHash: ByteString,
@@ -43,28 +46,39 @@ case class BlockHeader(
        |nonce: ${Hex.toHexString(nonce.toArray[Byte])}
        |}""".stripMargin
   }
-  val hash256: Int = 32
-  val hash160: Int = 20
-  val hash64: Int = 8
-      
-  require(validateConstructor == Right(BHValid))    
+  
+  //Refinement
+  type Hash256 = MatchesRegex[W.`"[0-9a-fA-F]{64}"`.T]
+  type Hash160 = MatchesRegex[W.`"[0-9a-fA-F]{40}"`.T]
+  type Hash64 = MatchesRegex[W.`"[0-9a-fA-F]{16}"`.T]  
 
+  require(validateConstructor == Right(BHValid))    
+  
   def validateConstructor(): Either[BHInvalid, BHValid] = {
     for {      
-      _ <- booleanToMap(parentHash.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(ommersHash.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(beneficiary.length == hash160) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(stateRoot.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(transactionsRoot.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(receiptsRoot.length == hash256) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(parentHash, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(ommersHash, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(beneficiary, 160)) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(stateRoot, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(transactionsRoot, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(receiptsRoot, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
       _ <- booleanToMap(difficulty >=0)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
       _ <- booleanToMap(number >=0)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
       _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
       _ <- booleanToMap(gasUsed >=0 && gasUsed <= gasLimit)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
       _ <- booleanToMap(extraData.length <= MaxExtraDataSize)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
-      _ <- booleanToMap(mixHash.length == hash256)//Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(nonce.length == hash64)//Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(mixHash, 256))//Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(nonce, 64))//Based on stated in section 4.4 of http://paper.gavwood.com/
     } yield BHValid
+  }
+
+  def valref(attr: ByteString, tkeccak: Int) : Boolean = {
+    tkeccak match {
+      case 256 => refineV[Hash256](Hex.toHexString(attr.toArray[Byte])).isRight
+      case 160  => refineV[Hash160](Hex.toHexString(attr.toArray[Byte])).isRight
+      case 64  => refineV[Hash64](Hex.toHexString(attr.toArray[Byte])).isRight
+      case _ => throw new NoSuchMethodException
+    }    
   }  
 
   def booleanToMap(eval: Boolean): Either[BHInvalid, BHValid] = {
