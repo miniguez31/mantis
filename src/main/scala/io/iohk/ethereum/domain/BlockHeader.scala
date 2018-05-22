@@ -64,7 +64,8 @@ case class BlockHeader(
       _ <- booleanToMap(valref(receiptsRoot, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
       _ <- booleanToMap(difficulty >=0)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
       _ <- booleanToMap(number >=0)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
-      _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation stated in section 
+        //4.4.2 of http://paper.gavwood.com/
       _ <- booleanToMap(gasUsed >=0 && gasUsed <= gasLimit)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
       _ <- booleanToMap(extraData.length <= MaxExtraDataSize)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
       _ <- booleanToMap(valref(mixHash, 256))//Based on stated in section 4.4 of http://paper.gavwood.com/
