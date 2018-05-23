@@ -54,24 +54,37 @@ case class BlockHeader(
 
   require(validateConstructor == Right(BHValid))    
   
-  def validateConstructor(): Either[BHInvalid, BHValid] = {
+def validateConstructor(): Either[BHInvalid, BHValid] = {
     for {      
-      _ <- booleanToMap(valref(parentHash, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(valref(ommersHash, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(valref(beneficiary, 160)) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(valref(stateRoot, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(valref(transactionsRoot, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(valref(receiptsRoot, 256)) //Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(difficulty >=0)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
-      _ <- booleanToMap(number >=0)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
-      _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)//Based on validation stated in section 
-        //4.4.2 of http://paper.gavwood.com/
-      _ <- booleanToMap(gasUsed >=0 && gasUsed <= gasLimit)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
-      _ <- booleanToMap(extraData.length <= MaxExtraDataSize)//Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
-      _ <- booleanToMap(valref(mixHash, 256))//Based on stated in section 4.4 of http://paper.gavwood.com/
-      _ <- booleanToMap(valref(nonce, 64))//Based on stated in section 4.4 of http://paper.gavwood.com/
+      //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(parentHash, 256)) 
+      //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(ommersHash, 256))
+      //Based on stated in section 4.4 of http://paper.gavwood.com/ 
+      _ <- booleanToMap(valref(beneficiary, 160)) 
+      //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(stateRoot, 256))
+      //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(transactionsRoot, 256))
+      //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(receiptsRoot, 256))
+      //Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(difficulty >=0)
+      //Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(number >=0)
+      //Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(gasLimit >= minGasLimit && gasLimit <= maxGasLimit)
+      //Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(gasUsed >=0 && gasUsed <= gasLimit)
+      //Based on validation stated in section 4.4.2 of http://paper.gavwood.com/
+      _ <- booleanToMap(extraData.length <= MaxExtraDataSize)
+      //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(mixHash, 256))
+      //Based on stated in section 4.4 of http://paper.gavwood.com/
+      _ <- booleanToMap(valref(nonce, 64))
     } yield BHValid
   }
+
 
   def valref(attr: ByteString, tkeccak: Int) : Boolean = {
     tkeccak match {
